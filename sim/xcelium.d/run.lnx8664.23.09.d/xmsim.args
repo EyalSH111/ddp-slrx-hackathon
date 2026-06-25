@@ -1,0 +1,30 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
++INCDIR+/project/tsmc65/shared/k5_share/kuntz5/src/common
++incdir+/data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/top
++define+tsmc65
++define+XMEM_INTRFC
++define+MAX10_FPGA
++define+CRNT_XLR=slrx
+-NOWARN
+DLCVAR:NCEXDEP:DSEM2009:DSEMEL:MTDYNUSE
+-UNBUFFERED
+-MESSAGES
++EMGRLOG
+xrun.log
+-XLSTIME
+1780861907
+-XLKEEP
+-XLMODE
+./xcelium.d/run.lnx8664.23.09.d
+-RUNMODE
+-CDSLIB
+./xcelium.d/run.lnx8664.23.09.d/cds.lib
+-HDLVAR
+./xcelium.d/run.lnx8664.23.09.d/hdl.var
+-XLNAME
+xrun
+-XLVERSION
+"TOOL:	xrun(64)	23.09-s013"

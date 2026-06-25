@@ -1,0 +1,4 @@
++tb_no_warn+DLCVAR:NCEXDEP:DSEM2009:DSEMEL:MTDYNUSE
++tb_rc_dir+./xcelium.d/run.lnx8664.23.09.d/xmsc_run
++tb_run_dir+/project/tsmc65/users/eyalsho/ws/my_k5_proj/sim
++tb_trans_record

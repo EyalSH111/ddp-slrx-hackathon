@@ -1,0 +1,11 @@
+source /data/project/tsmc65/shared/qsyn/util/qsyn_common.qsf
+set_global_assignment -name SEARCH_PATH /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox
+set_global_assignment -name SDC_FILE /data/project/tsmc65/shared/qsyn/basic.sdc
+set_global_assignment -name TOP_LEVEL_ENTITY qsyn_dummy_xlr_wrap
+set_global_assignment -name VERILOG_MACRO "CRNT_XLR=linear"
+set_global_assignment -name SYSTEMVERILOG_FILE /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_def_pkg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlrs/mem/mem_intf_read.sv
+set_global_assignment -name SYSTEMVERILOG_FILE /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlrs/mem/mem_intf_write.sv
+set_global_assignment -name SYSTEMVERILOG_FILE /project/tsmc65/shared/k5_share/slrx_ref/hw/top/slrx_def_pkg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE /project/tsmc65/shared/k5_share/slrx_ref/hw/top/slrx_regs_intrf.sv
+set_global_assignment -name SYSTEMVERILOG_FILE /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv

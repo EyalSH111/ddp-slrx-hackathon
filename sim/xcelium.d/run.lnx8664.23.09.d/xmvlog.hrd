@@ -1,0 +1,19 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-sv
+-sv
+-INCDIR
+/project/tsmc65/shared/k5_share/kuntz5/src/common
+-INCDIR
+/data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/top
+-DEFINE
+tsmc65
+-DELAY_TRIGGER
+-DEFINE
+XMEM_INTRFC
+-DEFINE
+MAX10_FPGA
+-DEFINE
+CRNT_XLR=slrx

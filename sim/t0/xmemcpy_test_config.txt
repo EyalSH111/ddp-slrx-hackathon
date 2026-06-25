@@ -1,0 +1,6 @@
+# Notice ALL values are in hex bytes
+# Notice int words are provided in little endian (value least significant byte is first)
+
+45 bd 00 40  # xmem_src_addr = 4000bd45 
+ae 5e 00 40  # xmem_dst_addr = 40005eae 
+ea 06 00 00  # xmc_num_bytes = 000006ea (1770 decimal)

@@ -1,0 +1,171 @@
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
+    Info: Copyright (C) 2025  Altera Corporation. All rights reserved.
+    Info: Your use of Altera Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Altera Program License 
+    Info: Subscription Agreement, the Altera Quartus Prime License Agreement,
+    Info: the Altera IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Altera and sold by Altera or its authorized distributors.  Please
+    Info: refer to the Altera Software License Subscription Agreements 
+    Info: on the Quartus Prime software download page.
+    Info: Processing started: Sun Jun  7 19:57:43 2026
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off linear -c linear
+Info (12021): Found 1 design units, including 0 entities, in source file /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_def_pkg.sv
+    Info (12022): Found design unit 1: xbox_def_pkg (SystemVerilog) File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_def_pkg.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlrs/mem/mem_intf_read.sv
+    Info (12023): Found entity 1: mem_intf_read File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlrs/mem/mem_intf_read.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlrs/mem/mem_intf_write.sv
+    Info (12023): Found entity 1: mem_intf_write File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlrs/mem/mem_intf_write.sv Line: 3
+Info (12021): Found 1 design units, including 0 entities, in source file /project/tsmc65/shared/k5_share/slrx_ref/hw/top/slrx_def_pkg.sv
+    Info (12022): Found design unit 1: slrx_def_pkg (SystemVerilog) File: /project/tsmc65/shared/k5_share/slrx_ref/hw/top/slrx_def_pkg.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/slrx_ref/hw/top/slrx_regs_intrf.sv
+    Info (12023): Found entity 1: slrx_regs_intrf File: /project/tsmc65/shared/k5_share/slrx_ref/hw/top/slrx_regs_intrf.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv
+    Info (12023): Found entity 1: qsyn_dummy_xlr_wrap File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv
+    Info (12023): Found entity 1: linear File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 4
+Info (12127): Elaborating entity "qsyn_dummy_xlr_wrap" for the top level hierarchy
+Info (12128): Elaborating entity "mem_intf_read" for hierarchy "mem_intf_read:mem_intf_read" File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 35
+Warning (12158): Entity "mem_intf_read" contains only dangling pins File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 35
+Info (12128): Elaborating entity "mem_intf_write" for hierarchy "mem_intf_write:mem_intf_write" File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 36
+Warning (12158): Entity "mem_intf_write" contains only dangling pins File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 36
+Info (12128): Elaborating entity "slrx_regs_intrf" for hierarchy "slrx_regs_intrf:slrx_regs_intrf" File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 37
+Warning (12158): Entity "slrx_regs_intrf" contains only dangling pins File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 37
+Info (12128): Elaborating entity "linear" for hierarchy "linear:linear" File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 75
+Warning (10036): Verilog HDL or VHDL warning at linear.sv(43): object "lin_arr_out_dim" assigned a value but never read File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 43
+Warning (10230): Verilog HDL assignment warning at linear.sv(66): truncated value with size 32 to match size of target (16) File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 66
+Warning (10230): Verilog HDL assignment warning at linear.sv(67): truncated value with size 32 to match size of target (16) File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 67
+Warning (10230): Verilog HDL assignment warning at linear.sv(69): truncated value with size 32 to match size of target (16) File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 69
+Warning (10230): Verilog HDL assignment warning at linear.sv(70): truncated value with size 32 to match size of target (16) File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 70
+Warning (10230): Verilog HDL assignment warning at linear.sv(71): truncated value with size 32 to match size of target (6) File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 71
+Warning (10230): Verilog HDL assignment warning at linear.sv(72): truncated value with size 32 to match size of target (6) File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 72
+Warning (10230): Verilog HDL assignment warning at linear.sv(73): truncated value with size 32 to match size of target (5) File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 73
+Warning (10230): Verilog HDL assignment warning at linear.sv(104): truncated value with size 32 to match size of target (16) File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 104
+Warning (10230): Verilog HDL assignment warning at linear.sv(122): truncated value with size 32 to match size of target (8) File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 122
+Warning (10230): Verilog HDL assignment warning at linear.sv(135): truncated value with size 32 to match size of target (8) File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 135
+Warning (12161): Node "slrx_regs_intrf:slrx_regs_intrf|slrx_regs_intrf.xlr_start" is stuck at GND because node is in wire loop and does not have a source File: /project/tsmc65/shared/k5_share/slrx_ref/hw/top/slrx_regs_intrf.sv Line: 4
+Warning (12161): Node "slrx_regs_intrf:slrx_regs_intrf|slrx_regs_intrf.slrx_cmd[2]" is stuck at GND because node is in wire loop and does not have a source File: /project/tsmc65/shared/k5_share/slrx_ref/hw/top/slrx_regs_intrf.sv Line: 4
+Warning (12161): Node "slrx_regs_intrf:slrx_regs_intrf|slrx_regs_intrf.slrx_cmd[1]" is stuck at GND because node is in wire loop and does not have a source File: /project/tsmc65/shared/k5_share/slrx_ref/hw/top/slrx_regs_intrf.sv Line: 4
+Warning (12161): Node "slrx_regs_intrf:slrx_regs_intrf|slrx_regs_intrf.slrx_cmd[0]" is stuck at GND because node is in wire loop and does not have a source File: /project/tsmc65/shared/k5_share/slrx_ref/hw/top/slrx_regs_intrf.sv Line: 4
+Info (278001): Inferred 33 megafunctions from design logic
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "linear:linear|Mult0" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 102
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "linear:linear|Mult1" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "linear:linear|Mult32" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "linear:linear|Mult25" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "linear:linear|Mult24" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "linear:linear|Mult23" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "linear:linear|Mult22" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "linear:linear|Mult21" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "linear:linear|Mult20" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "linear:linear|Mult19" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "linear:linear|Mult18" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "linear:linear|Mult31" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "linear:linear|Mult30" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "linear:linear|Mult29" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "linear:linear|Mult28" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "linear:linear|Mult27" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "linear:linear|Mult26" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "linear:linear|Mult9" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "linear:linear|Mult8" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "linear:linear|Mult7" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "linear:linear|Mult6" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "linear:linear|Mult5" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "linear:linear|Mult4" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "linear:linear|Mult3" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "linear:linear|Mult2" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "linear:linear|Mult17" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "linear:linear|Mult16" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "linear:linear|Mult15" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "linear:linear|Mult14" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "linear:linear|Mult13" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "linear:linear|Mult12" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "linear:linear|Mult11" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "linear:linear|Mult10" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+Info (12130): Elaborated megafunction instantiation "linear:linear|lpm_mult:Mult0" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 102
+Info (12133): Instantiated megafunction "linear:linear|lpm_mult:Mult0" with the following parameter: File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 102
+    Info (12134): Parameter "LPM_WIDTHA" = "5"
+    Info (12134): Parameter "LPM_WIDTHB" = "6"
+    Info (12134): Parameter "LPM_WIDTHP" = "11"
+    Info (12134): Parameter "LPM_WIDTHR" = "11"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_mks.tdf
+    Info (12023): Found entity 1: mult_mks File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/db/mult_mks.tdf Line: 29
+Info (12130): Elaborated megafunction instantiation "linear:linear|lpm_mult:Mult1" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+Info (12133): Instantiated megafunction "linear:linear|lpm_mult:Mult1" with the following parameter: File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (12134): Parameter "LPM_WIDTHA" = "9"
+    Info (12134): Parameter "LPM_WIDTHB" = "8"
+    Info (12134): Parameter "LPM_WIDTHP" = "17"
+    Info (12134): Parameter "LPM_WIDTHR" = "17"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_vds.tdf
+    Info (12023): Found entity 1: mult_vds File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/db/mult_vds.tdf Line: 29
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "host_regs_valid_out" is stuck at GND File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 27
+    Warning (13410): Pin "dummy_dout[8]" is stuck at GND File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 101
+    Warning (13410): Pin "dummy_dout[9]" is stuck at GND File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 101
+    Warning (13410): Pin "dummy_dout[10]" is stuck at GND File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 101
+    Warning (13410): Pin "dummy_dout[11]" is stuck at GND File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 101
+    Warning (13410): Pin "dummy_dout[12]" is stuck at GND File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 101
+    Warning (13410): Pin "dummy_dout[13]" is stuck at GND File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 101
+    Warning (13410): Pin "dummy_dout[14]" is stuck at GND File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 101
+    Warning (13410): Pin "dummy_dout[15]" is stuck at GND File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 101
+    Warning (13410): Pin "dummy_dout[16]" is stuck at GND File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 101
+    Warning (13410): Pin "dummy_dout[17]" is stuck at GND File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 101
+    Warning (13410): Pin "dummy_dout[18]" is stuck at GND File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 101
+    Warning (13410): Pin "dummy_dout[19]" is stuck at GND File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 101
+    Warning (13410): Pin "dummy_dout[20]" is stuck at GND File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 101
+    Warning (13410): Pin "dummy_dout[21]" is stuck at GND File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 101
+    Warning (13410): Pin "dummy_dout[22]" is stuck at GND File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 101
+    Warning (13410): Pin "dummy_dout[23]" is stuck at GND File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 101
+    Warning (13410): Pin "dummy_dout[24]" is stuck at GND File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 101
+    Warning (13410): Pin "dummy_dout[25]" is stuck at GND File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 101
+    Warning (13410): Pin "dummy_dout[26]" is stuck at GND File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 101
+    Warning (13410): Pin "dummy_dout[27]" is stuck at GND File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 101
+    Warning (13410): Pin "dummy_dout[28]" is stuck at GND File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 101
+    Warning (13410): Pin "dummy_dout[29]" is stuck at GND File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 101
+    Warning (13410): Pin "dummy_dout[30]" is stuck at GND File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 101
+    Warning (13410): Pin "dummy_dout[31]" is stuck at GND File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 101
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 15 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "host_regs_read_pulse[0]" File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 28
+    Warning (15610): No output dependent on input pin "host_regs_read_pulse[1]" File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 28
+    Warning (15610): No output dependent on input pin "host_regs_read_pulse[2]" File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 28
+    Warning (15610): No output dependent on input pin "host_regs_read_pulse[3]" File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 28
+    Warning (15610): No output dependent on input pin "host_regs_read_pulse[4]" File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 28
+    Warning (15610): No output dependent on input pin "host_regs_read_pulse[5]" File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 28
+    Warning (15610): No output dependent on input pin "host_regs_read_pulse[6]" File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 28
+    Warning (15610): No output dependent on input pin "host_regs_read_pulse[7]" File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 28
+    Warning (15610): No output dependent on input pin "host_regs_read_pulse[8]" File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 28
+    Warning (15610): No output dependent on input pin "host_regs_read_pulse[9]" File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 28
+    Warning (15610): No output dependent on input pin "host_regs_read_pulse[10]" File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 28
+    Warning (15610): No output dependent on input pin "host_regs_read_pulse[11]" File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 28
+    Warning (15610): No output dependent on input pin "host_regs_read_pulse[12]" File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 28
+    Warning (15610): No output dependent on input pin "host_regs_read_pulse[13]" File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 28
+    Warning (15610): No output dependent on input pin "host_regs_read_pulse[14]" File: /data/project/tsmc65/shared/qsyn/qsyn_dummy_xlr_wrap/qsyn_dummy_xlr_wrap_sri.sv Line: 28
+Info (21057): Implemented 2074 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 63 input pins
+    Info (21059): Implemented 57 output pins
+    Info (21061): Implemented 1921 logic cells
+    Info (21062): Implemented 33 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 60 warnings
+    Info: Peak virtual memory: 657 megabytes
+    Info: Processing ended: Sun Jun  7 19:58:19 2026
+    Info: Elapsed time: 00:00:36
+    Info: Total CPU time (on all processors): 00:00:17
