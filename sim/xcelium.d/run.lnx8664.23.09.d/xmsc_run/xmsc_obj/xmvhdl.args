@@ -1,5 +1,0 @@
--nocopyright
--nowarn DLCVAR:NCEXDEP:DSEM2009:DSEMEL:MTDYNUSE
--cdslib /project/tsmc65/users/eyalsho/ws/my_k5_proj/sim/./xcelium.d/run.lnx8664.23.09.d/cdsrun.lib
--hdlvar /project/tsmc65/users/eyalsho/ws/my_k5_proj/sim/./xcelium.d/run.lnx8664.23.09.d/hdlrun.var
--work worklib
