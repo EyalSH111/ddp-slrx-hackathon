@@ -1,0 +1,9 @@
+# Simulation artifacts
+sim/xcelium.d/
+sim/xrun.history
+sim/xrun.key
+sim/xrun.log
+sim/t0/
+
+# Build artifacts
+sw/apps/*/build/
