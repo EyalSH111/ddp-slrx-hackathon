@@ -17,10 +17,12 @@ module conv (
   localparam KERNEL_SIZE        = KERNEL_DIM * KERNEL_DIM;          // 25
   localparam MAX_DOT_PROD_WIDTH = 16 + $clog2(KERNEL_SIZE);         // 21
   localparam ARR_IDX_W          = $clog2(DIM_MAX_SIZE);             // 5
+  localparam POOL_OUT_DIM_MAX   = (DIM_MAX_SIZE - KERNEL_DIM + 1)/2; // 14
 
   enum {IDLE, READ_KERNEL,
         LOAD_ROW0, LOAD_ROW1, LOAD_ROW2, LOAD_ROW3, LOAD_ROW4,
-        CALC, WRITE, NEXT_PIXEL, LOAD_NEW_ROW,
+        CALC, POST_CALC, WRITE, WRITE_POOL,
+        NEXT_PIXEL, LOAD_NEW_ROW,
         DONE} state, next_state;
 
   logic        conv_start;
@@ -36,6 +38,7 @@ module conv (
   logic [ARR_IDX_W:0]                   conv_arr_in_dim;
   logic [ARR_IDX_W:0]                   conv_arr_out_dim;
   logic signed [MAX_DOT_PROD_WIDTH-1:0] conv_bias_val;
+  logic                                 fused_pool_en;   // OUT_ROW_IDX_RI[0]=1 → fused conv+pool
 
   // Kernel cache (25 bytes)
   logic [KERNEL_DIM-1:0][KERNEL_DIM-1:0][7:0] kernel_cache, kernel_cache_ps;
@@ -43,17 +46,27 @@ module conv (
   // Row cache: 5 full input rows x DIM_MAX_SIZE bytes (1280 FFs)
   logic [KERNEL_DIM-1:0][DIM_MAX_SIZE-1:0][7:0] row_cache, row_cache_ps;
 
+  // 5x5 window: registered to break critical path (mux + MAC in separate cycles)
+  logic [KERNEL_DIM-1:0][KERNEL_DIM-1:0][7:0] window, window_ps;
+
   // Loop counters
   logic [ARR_IDX_W-1:0] row_cnt,     row_cnt_ps;
   logic [ARR_IDX_W-1:0] col_cnt,     col_cnt_ps;
-  logic [ARR_IDX_W:0]   next_in_row, next_in_row_ps;  // next input row index to load (0-based)
+  logic [ARR_IDX_W:0]   next_in_row, next_in_row_ps;
 
-  // 5x5 window: registered to break critical path (row_cache mux + MAC in separate cycles)
-  logic [KERNEL_DIM-1:0][KERNEL_DIM-1:0][7:0] window, window_ps;
+  // Fused pool buffers
+  logic [7:0]                        prev_conv_val,  prev_conv_val_ps; // first-of-column-pair
+  logic [POOL_OUT_DIM_MAX-1:0][7:0]  even_row_buf,   even_row_buf_ps;  // max of even-row pairs
+  logic [7:0]                        pool_out_val,   pool_out_val_ps;  // final pool result
 
-  // Output
+  // Conv output
   logic [7:0]                 conv_out_val, conv_out_val_ps;
   logic [XMEM_ADDR_WIDTH-1:0] conv_rslt_out_addr, conv_rslt_out_addr_ps;
+
+  // Combinational helpers
+  logic [ARR_IDX_W-2:0] pool_col;     // col_cnt / 2
+  logic [ARR_IDX_W-2:0] pool_row_idx; // row_cnt / 2
+  logic [7:0]           pool_pair_max; // max(prev_conv_val, conv_out_val) for POST_CALC
 
   //--------------------------------------------------------------------------------------------------------
 
@@ -70,18 +83,26 @@ module conv (
   assign conv_arr_in_dim   = slrx_regs_intrf.host_regs[ARR_IN_DIM_RI];
   assign conv_arr_out_dim  = conv_arr_in_dim - KERNEL_DIM + 1;
   assign conv_bias_val     = $signed(slrx_regs_intrf.host_regs[CONV_BIAS_VAL_RI][MAX_DOT_PROD_WIDTH-1:0]);
+  assign fused_pool_en     = slrx_regs_intrf.host_regs[OUT_ROW_IDX_RI][0]; // 1 = fused conv+pool
+
+  assign pool_col      = col_cnt[ARR_IDX_W-1:1];     // col_cnt >> 1
+  assign pool_row_idx  = row_cnt[ARR_IDX_W-1:1];     // row_cnt >> 1
+  assign pool_pair_max = (conv_out_val > prev_conv_val) ? conv_out_val : prev_conv_val;
 
   //========================================================================================================
 
   always_comb begin
     next_state = state;
 
-    kernel_cache_ps  = kernel_cache;
-    row_cache_ps     = row_cache;
-    window_ps        = window;        // default: hold
-    row_cnt_ps       = row_cnt;
-    col_cnt_ps       = col_cnt;
-    next_in_row_ps   = next_in_row;
+    kernel_cache_ps   = kernel_cache;
+    row_cache_ps      = row_cache;
+    window_ps         = window;
+    row_cnt_ps        = row_cnt;
+    col_cnt_ps        = col_cnt;
+    next_in_row_ps    = next_in_row;
+    prev_conv_val_ps  = prev_conv_val;
+    even_row_buf_ps   = even_row_buf;
+    pool_out_val_ps   = pool_out_val;
 
     mem_intf_read.mem_req        = 0;
     mem_intf_read.mem_start_addr = 0;
@@ -92,7 +113,7 @@ module conv (
     mem_intf_write.mem_size_bytes = 1;
     mem_intf_write.mem_data       = conv_out_val;
 
-    // Output address: row_cnt * out_dim + col_cnt (registered via _ps)
+    // Conv output address (used in non-fused WRITE state)
     conv_rslt_out_addr_ps = conv_arr_out_addr +
                             row_cnt * conv_arr_out_dim +
                             col_cnt;
@@ -104,11 +125,11 @@ module conv (
       IDLE: if (conv_start) begin
         row_cnt_ps     = 0;
         col_cnt_ps     = 0;
-        next_in_row_ps = (ARR_IDX_W+1)'(KERNEL_DIM); // first new row to load = row 5
+        next_in_row_ps = (ARR_IDX_W+1)'(KERNEL_DIM);
         next_state     = READ_KERNEL;
       end
 
-      // --- Read 5x5 kernel weights (25 bytes) into kernel_cache ---
+      // --- Read 5x5 kernel weights (25 bytes) ---
       READ_KERNEL: begin
         mem_intf_read.mem_req        = 1;
         mem_intf_read.mem_start_addr = conv_kernel_addr;
@@ -174,7 +195,7 @@ module conv (
         if (mem_intf_read.mem_valid) begin
           mem_intf_read.mem_req = 0;
           for (int c = 0; c < DIM_MAX_SIZE; c++) row_cache_ps[4][c] = mem_intf_read.mem_data[c];
-          // Precompute window for first pixel (col=0): pipeline stage 1
+          // Precompute window for first pixel (col=0): stage 1 of 2-stage pipeline
           for (int r = 0; r < KERNEL_DIM; r++)
             for (int c = 0; c < KERNEL_DIM; c++)
               window_ps[r][c] = (r < KERNEL_DIM-1) ? row_cache[r][c] : mem_intf_read.mem_data[c];
@@ -182,14 +203,51 @@ module conv (
         end
       end
 
-      // --- CALC: one pipeline cycle for conv_out_val_ps to settle ---
+      // --- CALC: pipeline cycle — window is registered, conv_out_val_ps settles ---
       CALC: begin
-        next_state = WRITE;
+        next_state = fused_pool_en ? POST_CALC : WRITE;
       end
 
-      // --- WRITE: write 1 output byte ---
+      // --- POST_CALC (fused mode only): buffer or max-pool based on row/col parity ---
+      POST_CALC: begin
+        // conv_out_val is now registered (this pixel's result)
+        if (!row_cnt[0] && !col_cnt[0]) begin
+          // even row, even col: store first-of-column-pair
+          prev_conv_val_ps = conv_out_val;
+          next_state = NEXT_PIXEL;
+        end else if (!row_cnt[0] && col_cnt[0]) begin
+          // even row, odd col: store max(even_col_pair) into even_row_buf
+          even_row_buf_ps[pool_col] = pool_pair_max;
+          next_state = NEXT_PIXEL;
+        end else if (row_cnt[0] && !col_cnt[0]) begin
+          // odd row, even col: store first-of-column-pair
+          prev_conv_val_ps = conv_out_val;
+          next_state = NEXT_PIXEL;
+        end else begin
+          // odd row, odd col: compute final 2x2 pool max and write
+          // pool_val = max(even_row_buf[pc], max(odd_2pc, odd_2pc+1))
+          pool_out_val_ps = (pool_pair_max > even_row_buf[pool_col]) ?
+                             pool_pair_max : even_row_buf[pool_col];
+          next_state = WRITE_POOL;
+        end
+      end
+
+      // --- WRITE (normal mode): write 1 conv output byte ---
       WRITE: begin
         mem_intf_write.mem_req = 1;
+        if (mem_intf_write.mem_ack) begin
+          mem_intf_write.mem_req = 0;
+          next_state = NEXT_PIXEL;
+        end
+      end
+
+      // --- WRITE_POOL (fused mode): write 1 pool output byte ---
+      WRITE_POOL: begin
+        mem_intf_write.mem_req        = 1;
+        mem_intf_write.mem_start_addr = conv_arr_out_addr +
+                                        pool_row_idx * (conv_arr_out_dim >> 1) +
+                                        pool_col;
+        mem_intf_write.mem_data       = pool_out_val;
         if (mem_intf_write.mem_ack) begin
           mem_intf_write.mem_req = 0;
           next_state = NEXT_PIXEL;
@@ -200,32 +258,30 @@ module conv (
       NEXT_PIXEL: begin
         if (col_cnt < conv_arr_out_dim - 1) begin
           col_cnt_ps = col_cnt + 1;
-          // Precompute window for next column: pipeline stage 1
+          // Precompute window for next column: stage 1 of 2-stage pipeline
           for (int r = 0; r < KERNEL_DIM; r++)
             for (int c = 0; c < KERNEL_DIM; c++)
               window_ps[r][c] = row_cache[r][(col_cnt + 1) + c];
-          next_state = CALC;          // column advance: row cache valid, no memory load
+          next_state = CALC;
         end else if (row_cnt < conv_arr_out_dim - 1) begin
           col_cnt_ps = 0;
           row_cnt_ps = row_cnt + 1;
-          next_state = LOAD_NEW_ROW;  // row advance: slide cache, window computed there
+          next_state = LOAD_NEW_ROW;
         end else begin
           next_state = DONE;
         end
       end
 
-      // --- Slide row cache: discard oldest row, load next input row into slot [4] ---
+      // --- Slide row cache: drop oldest row, load next input row into slot [4] ---
       LOAD_NEW_ROW: begin
         mem_intf_read.mem_req        = 1;
         mem_intf_read.mem_start_addr = conv_arr_in_addr + next_in_row * conv_arr_in_dim;
         mem_intf_read.mem_size_bytes = conv_arr_in_dim;
         if (mem_intf_read.mem_valid) begin
           mem_intf_read.mem_req = 0;
-          // Shift rows 1..4 down to 0..3, drop row 0
           for (int r = 0; r < KERNEL_DIM-1; r++) row_cache_ps[r] = row_cache[r+1];
-          // Load new row into slot [4]
           for (int c = 0; c < DIM_MAX_SIZE; c++) row_cache_ps[KERNEL_DIM-1][c] = mem_intf_read.mem_data[c];
-          // Precompute window for col=0 using updated cache: pipeline stage 1
+          // Precompute window for col=0 of next row: stage 1 of 2-stage pipeline
           for (int r = 0; r < KERNEL_DIM; r++)
             for (int c = 0; c < KERNEL_DIM; c++)
               window_ps[r][c] = (r < KERNEL_DIM-1) ? row_cache[r+1][c] : mem_intf_read.mem_data[c];
@@ -257,6 +313,9 @@ module conv (
       row_cnt            <= 0;
       col_cnt            <= 0;
       next_in_row        <= 0;
+      prev_conv_val      <= 0;
+      even_row_buf       <= 0;
+      pool_out_val       <= 0;
       conv_out_val       <= 0;
       conv_rslt_out_addr <= 0;
     end else begin
@@ -267,6 +326,9 @@ module conv (
       row_cnt            <= row_cnt_ps;
       col_cnt            <= col_cnt_ps;
       next_in_row        <= next_in_row_ps;
+      prev_conv_val      <= prev_conv_val_ps;
+      even_row_buf       <= even_row_buf_ps;
+      pool_out_val       <= pool_out_val_ps;
       conv_out_val       <= conv_out_val_ps;
       conv_rslt_out_addr <= conv_rslt_out_addr_ps;
     end
@@ -289,14 +351,11 @@ module conv (
       acc = bias;
       for (r = 0; r < KERNEL_DIM; r++) begin
         for (c = 0; c < KERNEL_DIM; c++) begin
-          // kernel: signed int8 → sign-extend
           k_s = {{(MAX_DOT_PROD_WIDTH-8){kernel[r][c][7]}}, kernel[r][c]};
-          // input: unsigned uint8 → zero-extend
           w_s = {{(MAX_DOT_PROD_WIDTH-8){1'b0}}, win[r][c]};
           acc = acc + (k_s * w_s);
         end
       end
-      // ReLU + descale by 8 bits + saturate to [0, 255]
       if (acc <= 0)
         ret_val = 0;
       else begin
