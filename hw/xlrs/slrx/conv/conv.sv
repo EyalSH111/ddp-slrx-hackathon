@@ -48,8 +48,8 @@ module conv (
   logic [ARR_IDX_W-1:0] col_cnt,     col_cnt_ps;
   logic [ARR_IDX_W:0]   next_in_row, next_in_row_ps;  // next input row index to load (0-based)
 
-  // 5x5 window derived combinationally from row_cache at current col_cnt
-  logic [KERNEL_DIM-1:0][KERNEL_DIM-1:0][7:0] window;
+  // 5x5 window: registered to break critical path (row_cache mux + MAC in separate cycles)
+  logic [KERNEL_DIM-1:0][KERNEL_DIM-1:0][7:0] window, window_ps;
 
   // Output
   logic [7:0]                 conv_out_val, conv_out_val_ps;
@@ -71,13 +71,6 @@ module conv (
   assign conv_arr_out_dim  = conv_arr_in_dim - KERNEL_DIM + 1;
   assign conv_bias_val     = $signed(slrx_regs_intrf.host_regs[CONV_BIAS_VAL_RI][MAX_DOT_PROD_WIDTH-1:0]);
 
-  // Window: combinational slice of row_cache at current column position
-  always_comb begin
-    for (int r = 0; r < KERNEL_DIM; r++)
-      for (int c = 0; c < KERNEL_DIM; c++)
-        window[r][c] = row_cache[r][col_cnt + c];
-  end
-
   //========================================================================================================
 
   always_comb begin
@@ -85,6 +78,7 @@ module conv (
 
     kernel_cache_ps  = kernel_cache;
     row_cache_ps     = row_cache;
+    window_ps        = window;        // default: hold
     row_cnt_ps       = row_cnt;
     col_cnt_ps       = col_cnt;
     next_in_row_ps   = next_in_row;
@@ -180,6 +174,10 @@ module conv (
         if (mem_intf_read.mem_valid) begin
           mem_intf_read.mem_req = 0;
           for (int c = 0; c < DIM_MAX_SIZE; c++) row_cache_ps[4][c] = mem_intf_read.mem_data[c];
+          // Precompute window for first pixel (col=0): pipeline stage 1
+          for (int r = 0; r < KERNEL_DIM; r++)
+            for (int c = 0; c < KERNEL_DIM; c++)
+              window_ps[r][c] = (r < KERNEL_DIM-1) ? row_cache[r][c] : mem_intf_read.mem_data[c];
           next_state = CALC;
         end
       end
@@ -202,11 +200,15 @@ module conv (
       NEXT_PIXEL: begin
         if (col_cnt < conv_arr_out_dim - 1) begin
           col_cnt_ps = col_cnt + 1;
-          next_state = CALC;          // column advance: row cache still valid, no memory load
+          // Precompute window for next column: pipeline stage 1
+          for (int r = 0; r < KERNEL_DIM; r++)
+            for (int c = 0; c < KERNEL_DIM; c++)
+              window_ps[r][c] = row_cache[r][(col_cnt + 1) + c];
+          next_state = CALC;          // column advance: row cache valid, no memory load
         end else if (row_cnt < conv_arr_out_dim - 1) begin
           col_cnt_ps = 0;
           row_cnt_ps = row_cnt + 1;
-          next_state = LOAD_NEW_ROW;  // row advance: slide cache by 1 row
+          next_state = LOAD_NEW_ROW;  // row advance: slide cache, window computed there
         end else begin
           next_state = DONE;
         end
@@ -223,6 +225,10 @@ module conv (
           for (int r = 0; r < KERNEL_DIM-1; r++) row_cache_ps[r] = row_cache[r+1];
           // Load new row into slot [4]
           for (int c = 0; c < DIM_MAX_SIZE; c++) row_cache_ps[KERNEL_DIM-1][c] = mem_intf_read.mem_data[c];
+          // Precompute window for col=0 using updated cache: pipeline stage 1
+          for (int r = 0; r < KERNEL_DIM; r++)
+            for (int c = 0; c < KERNEL_DIM; c++)
+              window_ps[r][c] = (r < KERNEL_DIM-1) ? row_cache[r+1][c] : mem_intf_read.mem_data[c];
           next_in_row_ps = next_in_row + 1;
           next_state = CALC;
         end
@@ -237,7 +243,7 @@ module conv (
   end // always_comb
 
   //-----------------------------------------------------------------------------------------------------
-  // Continuous assign: dot-product + ReLU + descale (window is combinational from row_cache)
+  // Stage 2: MAC on registered window (critical path: window FFs → 25 MACs → register)
   assign conv_out_val_ps = calc_conv_element(kernel_cache, conv_bias_val, window);
 
   //-----------------------------------------------------------------------------------------------------
@@ -247,6 +253,7 @@ module conv (
       state              <= IDLE;
       kernel_cache       <= 0;
       row_cache          <= 0;
+      window             <= 0;
       row_cnt            <= 0;
       col_cnt            <= 0;
       next_in_row        <= 0;
@@ -256,6 +263,7 @@ module conv (
       state              <= next_state;
       kernel_cache       <= kernel_cache_ps;
       row_cache          <= row_cache_ps;
+      window             <= window_ps;
       row_cnt            <= row_cnt_ps;
       col_cnt            <= col_cnt_ps;
       next_in_row        <= next_in_row_ps;
