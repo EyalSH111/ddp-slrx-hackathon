@@ -131,13 +131,16 @@ int main() {
 
   slr_ds_image_t* slr_ds_imgs = (slr_ds_image_t*)alloc_get(imgs_total_num_bytes, "slr_ds_imgs");
 
-  char* ds_test_file_path = "$K5_SHARE/slrx_ref/sw/apps/slr_shared/pt/workspace/slr_ds_mnx.txt" ;
+  char ds_test_file_path[40];
+  get_ds_test_file_path(ds_test_file_path);
 
   FILE_REF file_ref ; // assigned by load_hex_file( ... OPEN*)
 
   printf("\n\n");
 
   for (int img_idx=0; img_idx<NUM_TEST_IMAGES; img_idx++) {
+    slr_animate_hook(ds_test_file_path);
+    if (loop_speed_test_on((infer_cb_t)infer, slr_ds_imgs, slr_model_params_p, slr_intr_fm_p)) break;
     file_access_mode_t file_access_mode = img_idx==0 ? OPEN : CONT ;
     load_hex_file(ds_test_file_path, &file_ref, (char*)slr_ds_imgs, imgs_total_num_bytes, file_access_mode); // Keep Open
 
