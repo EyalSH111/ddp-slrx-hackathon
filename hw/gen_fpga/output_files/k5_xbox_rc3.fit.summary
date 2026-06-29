@@ -1,0 +1,18 @@
+Fitter Status : Successful - Sun Jun 28 20:08:38 2026
+Quartus Prime Version : 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
+Revision Name : k5_xbox_rc3
+Top-level Entity Name : de10lite_wrap
+Family : MAX 10
+Device : 10M50DAF484C7G
+Timing Models : Final
+Total logic elements : 19,870 / 49,760 ( 40 % )
+    Total combinational functions : 19,502 / 49,760 ( 39 % )
+    Dedicated logic registers : 4,356 / 49,760 ( 9 % )
+Total registers : 4356
+Total pins : 185 / 360 ( 51 % )
+Total virtual pins : 0
+Total memory bits : 1,327,608 / 1,677,312 ( 79 % )
+Embedded Multiplier 9-bit elements : 62 / 288 ( 22 % )
+Total PLLs : 1 / 4 ( 25 % )
+UFM blocks : 0 / 1 ( 0 % )
+ADC blocks : 0 / 2 ( 0 % )

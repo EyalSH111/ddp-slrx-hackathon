@@ -1,0 +1,151 @@
+Flow report for k5_xbox_rc3
+Sun Jun 28 20:09:29 2026
+Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2025  Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Altera and sold by Altera or its authorized distributors.  Please
+refer to the Altera Software License Subscription Agreements 
+on the Quartus Prime software download page.
+
+
+
++--------------------------------------------------------------------------------------+
+; Flow Summary                                                                         ;
++------------------------------------+-------------------------------------------------+
+; Flow Status                        ; Successful - Sun Jun 28 20:09:29 2026           ;
+; Quartus Prime Version              ; 24.1std.0 Build 1077 03/04/2025 SC Lite Edition ;
+; Revision Name                      ; k5_xbox_rc3                                     ;
+; Top-level Entity Name              ; de10lite_wrap                                   ;
+; Family                             ; MAX 10                                          ;
+; Device                             ; 10M50DAF484C7G                                  ;
+; Timing Models                      ; Final                                           ;
+; Total logic elements               ; 19,870 / 49,760 ( 40 % )                        ;
+;     Total combinational functions  ; 19,502 / 49,760 ( 39 % )                        ;
+;     Dedicated logic registers      ; 4,356 / 49,760 ( 9 % )                          ;
+; Total registers                    ; 4356                                            ;
+; Total pins                         ; 185 / 360 ( 51 % )                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 1,327,608 / 1,677,312 ( 79 % )                  ;
+; Embedded Multiplier 9-bit elements ; 62 / 288 ( 22 % )                               ;
+; Total PLLs                         ; 1 / 4 ( 25 % )                                  ;
+; UFM blocks                         ; 0 / 1 ( 0 % )                                   ;
+; ADC blocks                         ; 0 / 2 ( 0 % )                                   ;
++------------------------------------+-------------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 06/28/2026 20:02:04 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; k5_xbox_rc3         ;
++-------------------+---------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                                ;
++-------------------------------------+----------------------------------------------------------------------------------------------+---------------+---------------+------------+
+; Assignment Name                     ; Value                                                                                        ; Default Value ; Entity Name   ; Section Id ;
++-------------------------------------+----------------------------------------------------------------------------------------------+---------------+---------------+------------+
+; COMPILER_SIGNATURE_ID               ; 7320248251731.178267692465332                                                                ; --            ; --            ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                                                           ; --            ; --            ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                                                            ; --            ; --            ; --         ;
+; MISC_FILE                           ; /project/tsmc65/shared/k5_share/kuntz5/fpga/gen_de10lite/DE10Lite_ref/VGA_DATA/Img_RAM.bsf   ; --            ; --            ; --         ;
+; MISC_FILE                           ; /project/tsmc65/shared/k5_share/kuntz5/fpga/gen_de10lite/DE10Lite_ref/VGA_Audio_PLL_bb.v     ; --            ; --            ; --         ;
+; MISC_FILE                           ; /project/tsmc65/shared/k5_share/kuntz5/fpga/gen_de10lite/DE10Lite_ref/VGA_Audio_PLL.ppf      ; --            ; --            ; --         ;
+; MISC_FILE                           ; /project/tsmc65/shared/k5_share/k5_xbox/fpga/xbox_altera_mems/altera_sp_ram_1024x256_be_bb.v ; --            ; --            ; --         ;
+; MISC_FILE                           ; /project/tsmc65/shared/k5_share/k5_xbox/fpga/max10_k5x_pll/k5x_pll_bb.v                      ; --            ; --            ; --         ;
+; MISC_FILE                           ; /project/tsmc65/shared/k5_share/k5_xbox/fpga/max10_k5x_pll/k5x_pll.ppf                       ; --            ; --            ; --         ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                                                                            ; --            ; --            ; --         ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                                                                            ; --            ; --            ; --         ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                                                                                   ; --            ; --            ; --         ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                                                                                   ; --            ; --            ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family)                                                       ; --            ; de10lite_wrap ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                                                       ; --            ; de10lite_wrap ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                                                       ; --            ; de10lite_wrap ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                                                          ; --            ; --            ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                                        ; --            ; --            ; --         ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                                                 ; --            ; --            ; --         ;
+; SEARCH_PATH                         ; /project/tsmc65/shared/k5_share/k5_xbox/fpga/gen_de10lite/                                   ; --            ; --            ; --         ;
+; SEARCH_PATH                         ; /project/tsmc65/shared/k5_share/kuntz5/src/common/                                           ; --            ; --            ; --         ;
+; SEARCH_PATH                         ; /project/tsmc65/shared/k5_share/kuntz5/src/uart_access/                                      ; --            ; --            ; --         ;
+; SEARCH_PATH                         ; /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/top                            ; --            ; --            ; --         ;
+; SMART_RECOMPILE                     ; On                                                                                           ; Off           ; --            ; --         ;
+; TOP_LEVEL_ENTITY                    ; de10lite_wrap                                                                                ; k5_xbox_rc3   ; --            ; --         ;
+; VERILOG_INPUT_VERSION               ; SystemVerilog_2005                                                                           ; Verilog_2001  ; --            ; --         ;
+; VERILOG_MACRO                       ; XMEM_INTRFC=1                                                                                ; --            ; --            ; --         ;
+; VERILOG_MACRO                       ; ALTERA=1                                                                                     ; --            ; --            ; --         ;
+; VERILOG_MACRO                       ; MAX10_FPGA=1                                                                                 ; --            ; --            ; --         ;
+; VERILOG_MACRO                       ; ALTERA_MHZ=50                                                                                ; --            ; --            ; --         ;
+; VERILOG_MACRO                       ; DISABLE_STM_NA                                                                               ; --            ; --            ; --         ;
+; VERILOG_MACRO                       ; CRNT_XLR=slrx                                                                                ; --            ; --            ; --         ;
+; VERILOG_SHOW_LMF_MAPPING_MESSAGES   ; Off                                                                                          ; --            ; --            ; --         ;
++-------------------------------------+----------------------------------------------------------------------------------------------+---------------+---------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:01:12     ; 1.0                     ; 814 MB              ; 00:00:00                           ;
+; Fitter               ; 00:05:17     ; 1.0                     ; 1215 MB             ; 00:00:00                           ;
+; Timing Analyzer      ; 00:00:42     ; 1.0                     ; 930 MB              ; 00:00:00                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 703 MB              ; 00:00:00                           ;
+; Total                ; 00:07:14     ; --                      ; --                  ; 00:00:00                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                                                   ;
++----------------------+------------------------------------------------+-------------+------------+----------------+
+; Module Name          ; Machine Hostname                               ; OS Name     ; OS Version ; Processor type ;
++----------------------+------------------------------------------------+-------------+------------+----------------+
+; Analysis & Synthesis ; ip-10-70-142-142.il-central-1.compute.internal ; Rocky Linux ; 8          ; x86_64         ;
+; Fitter               ; ip-10-70-142-142.il-central-1.compute.internal ; Rocky Linux ; 8          ; x86_64         ;
+; Timing Analyzer      ; ip-10-70-142-142.il-central-1.compute.internal ; Rocky Linux ; 8          ; x86_64         ;
+; Assembler            ; ip-10-70-142-142.il-central-1.compute.internal ; Rocky Linux ; 8          ; x86_64         ;
++----------------------+------------------------------------------------+-------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off k5_xbox_rc3 -c k5_xbox_rc3
+quartus_fit --read_settings_files=on --write_settings_files=off k5_xbox_rc3 -c k5_xbox_rc3
+quartus_sta k5_xbox_rc3 -c k5_xbox_rc3
+quartus_asm k5_xbox_rc3
+
+
+

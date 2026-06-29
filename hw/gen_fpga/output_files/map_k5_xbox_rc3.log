@@ -1,0 +1,893 @@
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
+    Info: Copyright (C) 2025  Altera Corporation. All rights reserved.
+    Info: Your use of Altera Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Altera Program License 
+    Info: Subscription Agreement, the Altera Quartus Prime License Agreement,
+    Info: the Altera IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Altera and sold by Altera or its authorized distributors.  Please
+    Info: refer to the Altera Software License Subscription Agreements 
+    Info: on the Quartus Prime software download page.
+    Info: Processing started: Sun Jun 28 20:02:04 2026
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off k5_xbox_rc3 -c k5_xbox_rc3
+Info (125061): Changed top-level design entity name to "de10lite_wrap"
+Info (125068): Revision "k5_xbox_rc3" was previously opened in Quartus Prime software version 23.1std.1 Lite Edition. Created Quartus Prime Default Settings File /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/k5_xbox_rc3_assignment_defaults.qdf, which contains the default assignment setting information from Quartus Prime software version 23.1std.1 Lite Edition.
+Info (125061): Changed top-level design entity name to "de10lite_wrap"
+Info (125069): Default assignment values were changed in the current version of the Quartus Prime software -- changes to default assignments values are contained in file /data/project/tsmc65/shared/quartus_install/intelFPGA_lite/24.1std/quartus/linux64/assignment_defaults.qdf
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20029): Only one processor detected - disabling parallel compilation
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv
+    Info (12023): Found entity 1: de10lite_wrap File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/fpga/gen_de10lite/DE10Lite_vlib/spi_ee_config.v
+    Info (12023): Found entity 1: spi_ee_config File: /project/tsmc65/shared/k5_share/kuntz5/fpga/gen_de10lite/DE10Lite_vlib/spi_ee_config.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/fpga/gen_de10lite/DE10Lite_vlib/spi_controller.v
+    Info (12023): Found entity 1: spi_controller File: /project/tsmc65/shared/k5_share/kuntz5/fpga/gen_de10lite/DE10Lite_vlib/spi_controller.v Line: 1
+Warning (10229): Verilog HDL Expression warning at led_driver.v(44): truncated literal to match 3 bits File: /project/tsmc65/shared/k5_share/kuntz5/fpga/gen_de10lite/DE10Lite_vlib/led_driver.v Line: 44
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/fpga/gen_de10lite/DE10Lite_vlib/led_driver.v
+    Info (12023): Found entity 1: led_driver File: /project/tsmc65/shared/k5_share/kuntz5/fpga/gen_de10lite/DE10Lite_vlib/led_driver.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/fpga/gen_de10lite/DE10Lite_vlib/SEG7_LUT_6.v
+    Info (12023): Found entity 1: SEG7_LUT_6 File: /project/tsmc65/shared/k5_share/kuntz5/fpga/gen_de10lite/DE10Lite_vlib/SEG7_LUT_6.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/fpga/gen_de10lite/DE10Lite_vlib/SEG7_LUT.v
+    Info (12023): Found entity 1: SEG7_LUT File: /project/tsmc65/shared/k5_share/kuntz5/fpga/gen_de10lite/DE10Lite_vlib/SEG7_LUT.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/fpga/gen_de10lite/DE10Lite_vlib/Reset_Delay.v
+    Info (12023): Found entity 1: Reset_Delay File: /project/tsmc65/shared/k5_share/kuntz5/fpga/gen_de10lite/DE10Lite_vlib/Reset_Delay.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/fpga/gen_de10lite/DE10Lite_ref/VGA_DATA/VGA_OSD_RAM.v
+    Info (12023): Found entity 1: VGA_OSD_RAM File: /project/tsmc65/shared/k5_share/kuntz5/fpga/gen_de10lite/DE10Lite_ref/VGA_DATA/VGA_OSD_RAM.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/fpga/gen_de10lite/DE10Lite_ref/VGA_DATA/VGA_Controller.v
+    Info (12023): Found entity 1: VGA_Controller File: /project/tsmc65/shared/k5_share/kuntz5/fpga/gen_de10lite/DE10Lite_ref/VGA_DATA/VGA_Controller.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/fpga/gen_de10lite/DE10Lite_ref/VGA_DATA/Img_RAM.v
+    Info (12023): Found entity 1: Img_RAM File: /project/tsmc65/shared/k5_share/kuntz5/fpga/gen_de10lite/DE10Lite_ref/VGA_DATA/Img_RAM.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/fpga/gen_de10lite/DE10Lite_ref/VGA_Audio_PLL.v
+    Info (12023): Found entity 1: VGA_Audio_PLL File: /project/tsmc65/shared/k5_share/kuntz5/fpga/gen_de10lite/DE10Lite_ref/VGA_Audio_PLL.v Line: 40
+Info (12021): Found 1 design units, including 0 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/fpga/src/seg7_art/seg7_art_pkg.sv
+    Info (12022): Found design unit 1: seg7_art_pkg (SystemVerilog) File: /project/tsmc65/shared/k5_share/kuntz5/fpga/src/seg7_art/seg7_art_pkg.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/fpga/src/pulse_extender.sv
+    Info (12023): Found entity 1: pulse_extender File: /project/tsmc65/shared/k5_share/kuntz5/fpga/src/pulse_extender.sv Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/fpga/src/reset_over_uart.sv
+    Info (12023): Found entity 1: reset_over_uart File: /project/tsmc65/shared/k5_share/kuntz5/fpga/src/reset_over_uart.sv Line: 13
+Info (12021): Found 0 design units, including 0 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/src/common/default_clocks_defines.sv
+Info (12021): Found 1 design units, including 0 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/src/common/k5_pkg.sv
+    Info (12022): Found design unit 1: k5_pkg (SystemVerilog) File: /project/tsmc65/shared/k5_share/kuntz5/src/common/k5_pkg.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/src/core/k5_core.sv
+    Info (12023): Found entity 1: k5_core File: /project/tsmc65/shared/k5_share/kuntz5/src/core/k5_core.sv Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/src/core/k5_dx.sv
+    Info (12023): Found entity 1: k5_dx File: /project/tsmc65/shared/k5_share/kuntz5/src/core/k5_dx.sv Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/src/core/k5_dx_comb.sv
+    Info (12023): Found entity 1: k5_dx_comb File: /project/tsmc65/shared/k5_share/kuntz5/src/core/k5_dx_comb.sv Line: 9
+Info (12021): Found 4 design units, including 4 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/src/mul/mag_mul/lib_rtl/mag_lib_rtl.v
+    Info (12023): Found entity 1: FA File: /project/tsmc65/shared/k5_share/kuntz5/src/mul/mag_mul/lib_rtl/mag_lib_rtl.v Line: 3
+    Info (12023): Found entity 2: HA File: /project/tsmc65/shared/k5_share/kuntz5/src/mul/mag_mul/lib_rtl/mag_lib_rtl.v Line: 18
+    Info (12023): Found entity 3: AN2 File: /project/tsmc65/shared/k5_share/kuntz5/src/mul/mag_mul/lib_rtl/mag_lib_rtl.v Line: 32
+    Info (12023): Found entity 4: ND2 File: /project/tsmc65/shared/k5_share/kuntz5/src/mul/mag_mul/lib_rtl/mag_lib_rtl.v Line: 44
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/src/mul/mag_mul/gen/mag_m1_32x32_r66.v
+    Info (12023): Found entity 1: mag_m1_32x32_r66 File: /project/tsmc65/shared/k5_share/kuntz5/src/mul/mag_mul/gen/mag_m1_32x32_r66.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/src/mul/rtl/mul_base.sv
+    Info (12023): Found entity 1: mul_base File: /project/tsmc65/shared/k5_share/kuntz5/src/mul/rtl/mul_base.sv Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/src/mul/rtl/mul_final.sv
+    Info (12023): Found entity 1: mul_final File: /project/tsmc65/shared/k5_share/kuntz5/src/mul/rtl/mul_final.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_confmem.sv
+    Info (12023): Found entity 1: k5_confmem File: /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_confmem.sv Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_dpram.sv
+    Info (12023): Found entity 1: k5_dpram File: /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_dpram.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_pcmem.sv
+    Info (12023): Found entity 1: k5_pcmem File: /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_pcmem.sv Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_rmem.sv
+    Info (12023): Found entity 1: k5_rmem File: /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_rmem.sv Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_sch.sv
+    Info (12023): Found entity 1: k5_sch File: /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_sch.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_spram.sv
+    Info (12023): Found entity 1: k5_spram File: /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_spram.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_sys.sv
+    Info (12023): Found entity 1: k5_sys File: /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_sys.sv Line: 14
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_sys_access.sv
+    Info (12023): Found entity 1: k5_sys_access File: /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_sys_access.sv Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_com.sv
+    Info (12023): Found entity 1: k5_com File: /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_com.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_sys_regs_mem_access.sv
+    Info (12023): Found entity 1: k5_sys_regs_mem_access File: /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_sys_regs_mem_access.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_tcm.sv
+    Info (12023): Found entity 1: k5_tcm File: /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_tcm.sv Line: 9
+Info (12021): Found 1 design units, including 0 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/src/uart_access/k5_smart_uart_pkg.sv
+    Info (12022): Found design unit 1: k5_smart_uart_pkg (SystemVerilog) File: /project/tsmc65/shared/k5_share/kuntz5/src/uart_access/k5_smart_uart_pkg.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/src/uart_access/k5_remote_access_intrfc.sv
+    Info (12023): Found entity 1: k5_uart_remote_access_intrfc File: /project/tsmc65/shared/k5_share/kuntz5/src/uart_access/k5_remote_access_intrfc.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/src/uart_access/k5_uart_access.sv
+    Info (12023): Found entity 1: k5_uart_access File: /project/tsmc65/shared/k5_share/kuntz5/src/uart_access/k5_uart_access.sv Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/src/uart_access/k5_uart_rx.sv
+    Info (12023): Found entity 1: uart_rx File: /project/tsmc65/shared/k5_share/kuntz5/src/uart_access/k5_uart_rx.sv Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/src/uart_access/k5_uart_tx.sv
+    Info (12023): Found entity 1: uart_tx File: /project/tsmc65/shared/k5_share/kuntz5/src/uart_access/k5_uart_tx.sv Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/fpga/src/altera_dpram_256x32.v
+    Info (12023): Found entity 1: altera_dpram_256x32 File: /project/tsmc65/shared/k5_share/kuntz5/fpga/src/altera_dpram_256x32.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/fpga/src/altera_dpram_8x32.v
+    Info (12023): Found entity 1: altera_dpram_8x32 File: /project/tsmc65/shared/k5_share/kuntz5/fpga/src/altera_dpram_8x32.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/fpga/src/altera_spram_8192x32.v
+    Info (12023): Found entity 1: altera_spram_8192x32 File: /project/tsmc65/shared/k5_share/kuntz5/fpga/src/altera_spram_8192x32.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/fpga/src/altera_spram_4096x32.v
+    Info (12023): Found entity 1: altera_spram_4096x32 File: /project/tsmc65/shared/k5_share/kuntz5/fpga/src/altera_spram_4096x32.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/fpga/src/altera_spram_10240x32.v
+    Info (12023): Found entity 1: altera_spram_10240x32 File: /project/tsmc65/shared/k5_share/kuntz5/fpga/src/altera_spram_10240x32.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/fpga/src/altera_spram_5120x32.v
+    Info (12023): Found entity 1: altera_spram_5120x32 File: /project/tsmc65/shared/k5_share/kuntz5/fpga/src/altera_spram_5120x32.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/kuntz5/fpga/src/altera_spram_32768x32.v
+    Info (12023): Found entity 1: altera_spram_32768x32 File: /project/tsmc65/shared/k5_share/kuntz5/fpga/src/altera_spram_32768x32.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/k5_xbox/fpga/xbox_altera_mems/altera_sp_ram_1024x256_be.v
+    Info (12023): Found entity 1: altera_sp_ram_1024x256_be File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/xbox_altera_mems/altera_sp_ram_1024x256_be.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/k5_xbox/fpga/max10_k5x_pll/k5x_pll.v
+    Info (12023): Found entity 1: k5x_pll File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/max10_k5x_pll/k5x_pll.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xmem_spram.sv
+    Info (12023): Found entity 1: xmem_spram File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xmem_spram.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/k5_xbox/hw/k5_xbox_sys.sv
+    Info (12023): Found entity 1: k5_xbox_sys File: /project/tsmc65/shared/k5_share/k5_xbox/hw/k5_xbox_sys.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox.sv
+    Info (12023): Found entity 1: xbox File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox.sv Line: 5
+Info (12021): Found 1 design units, including 0 entities, in source file /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_def_pkg.sv
+    Info (12022): Found design unit 1: xbox_def_pkg (SystemVerilog) File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_def_pkg.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_mfarm.sv
+    Info (12023): Found entity 1: xbox_mfarm File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_mfarm.sv Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlr_wrap.sv
+    Info (12023): Found entity 1: xbox_xlr_wrap File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlr_wrap.sv Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlrs/mem/mem_ctrl.sv
+    Info (12023): Found entity 1: mem_ctrl File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlrs/mem/mem_ctrl.sv Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlrs/mem/mem_sram.sv
+    Info (12023): Found entity 1: mem_sram File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlrs/mem/mem_sram.sv Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlrs/mem/mannix_mem_farm.sv
+    Info (12023): Found entity 1: mannix_mem_farm File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlrs/mem/mannix_mem_farm.sv Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlrs/mem/mannix_mem_farm_lite.sv
+    Info (12023): Found entity 1: mannix_mem_farm_lite File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlrs/mem/mannix_mem_farm_lite.sv Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlrs/mem/mannix_mem_ifc.sv
+    Info (12023): Found entity 1: MANNIX_MEM_IFC File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlrs/mem/mannix_mem_ifc.sv Line: 15
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlrs/mem/mem_align.sv
+    Info (12023): Found entity 1: mem_align File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlrs/mem/mem_align.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlrs/mem/mem_arbiter.sv
+    Info (12023): Found entity 1: mem_arbiter File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlrs/mem/mem_arbiter.sv Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlrs/mem/mem_fabric.sv
+    Info (12023): Found entity 1: mem_fabric File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlrs/mem/mem_fabric.sv Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlrs/mem/mem_intf_arbiter.sv
+    Info (12023): Found entity 1: mem_intf_arbiter File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlrs/mem/mem_intf_arbiter.sv Line: 18
+Info (12021): Found 1 design units, including 0 entities, in source file /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlrs/mem/mem_intf_pkg.sv
+    Info (12022): Found design unit 1: mem_intf_pkg (SystemVerilog) File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlrs/mem/mem_intf_pkg.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlrs/mem/mem_intf_read.sv
+    Info (12023): Found entity 1: mem_intf_read File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlrs/mem/mem_intf_read.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlrs/mem/mem_intf_write.sv
+    Info (12023): Found entity 1: mem_intf_write File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlrs/mem/mem_intf_write.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlrs/mem/mem_req_ctrl.sv
+    Info (12023): Found entity 1: mem_req_ctrl File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlrs/mem/mem_req_ctrl.sv Line: 30
+Info (12021): Found 1 design units, including 0 entities, in source file /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/top/slrx_def_pkg.sv
+    Info (12022): Found design unit 1: slrx_def_pkg (SystemVerilog) File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/top/slrx_def_pkg.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/top/slrx_regs_intrf.sv
+    Info (12023): Found entity 1: slrx_regs_intrf File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/top/slrx_regs_intrf.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv
+    Info (12023): Found entity 1: conv File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/pool/pool.sv
+    Info (12023): Found entity 1: pool File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/pool/pool.sv Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv
+    Info (12023): Found entity 1: linear File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/top/xmem_intrf_mux.sv
+    Info (12023): Found entity 1: xmem_intf_mux File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/top/xmem_intrf_mux.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/top/slrx.sv
+    Info (12023): Found entity 1: slrx File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/top/slrx.sv Line: 4
+Warning (10236): Verilog HDL Implicit Net warning at mag_m1_32x32_r66.v(3347): created implicit net for "m0_a32" File: /project/tsmc65/shared/k5_share/kuntz5/src/mul/mag_mul/gen/mag_m1_32x32_r66.v Line: 3347
+Warning (10236): Verilog HDL Implicit Net warning at mag_m1_32x32_r66.v(3351): created implicit net for "m0_b32" File: /project/tsmc65/shared/k5_share/kuntz5/src/mul/mag_mul/gen/mag_m1_32x32_r66.v Line: 3351
+Warning (10236): Verilog HDL Implicit Net warning at k5_uart_access.sv(226): created implicit net for "pending_trig" File: /project/tsmc65/shared/k5_share/kuntz5/src/uart_access/k5_uart_access.sv Line: 226
+Warning (10236): Verilog HDL Implicit Net warning at xbox.sv(50): created implicit net for "is_xbox_xmem_addr" File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox.sv Line: 50
+Warning (10236): Verilog HDL Implicit Net warning at slrx.sv(32): created implicit net for "acc_sel" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/top/slrx.sv Line: 32
+Warning (10222): Verilog HDL Parameter Declaration warning at mem_req_ctrl.sv(79): Parameter Declaration in module "mem_req_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlrs/mem/mem_req_ctrl.sv Line: 79
+Warning (10222): Verilog HDL Parameter Declaration warning at mem_req_ctrl.sv(80): Parameter Declaration in module "mem_req_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlrs/mem/mem_req_ctrl.sv Line: 80
+Warning (10222): Verilog HDL Parameter Declaration warning at mem_req_ctrl.sv(81): Parameter Declaration in module "mem_req_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlrs/mem/mem_req_ctrl.sv Line: 81
+Warning (10222): Verilog HDL Parameter Declaration warning at mem_req_ctrl.sv(82): Parameter Declaration in module "mem_req_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlrs/mem/mem_req_ctrl.sv Line: 82
+Warning (10222): Verilog HDL Parameter Declaration warning at mem_req_ctrl.sv(83): Parameter Declaration in module "mem_req_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlrs/mem/mem_req_ctrl.sv Line: 83
+Info (12127): Elaborating entity "de10lite_wrap" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at de10lite_k5_xbox_wrap.sv(326): object "data_x" assigned a value but never read File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 326
+Warning (10034): Output port "DRAM_ADDR" at de10lite_k5_xbox_wrap.sv(13) has no driver File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 13
+Warning (10034): Output port "DRAM_BA" at de10lite_k5_xbox_wrap.sv(14) has no driver File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 14
+Warning (10034): Output port "DRAM_CAS_N" at de10lite_k5_xbox_wrap.sv(15) has no driver File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 15
+Warning (10034): Output port "DRAM_CKE" at de10lite_k5_xbox_wrap.sv(16) has no driver File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 16
+Warning (10034): Output port "DRAM_CLK" at de10lite_k5_xbox_wrap.sv(17) has no driver File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 17
+Warning (10034): Output port "DRAM_CS_N" at de10lite_k5_xbox_wrap.sv(18) has no driver File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 18
+Warning (10034): Output port "DRAM_LDQM" at de10lite_k5_xbox_wrap.sv(20) has no driver File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 20
+Warning (10034): Output port "DRAM_RAS_N" at de10lite_k5_xbox_wrap.sv(21) has no driver File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 21
+Warning (10034): Output port "DRAM_UDQM" at de10lite_k5_xbox_wrap.sv(22) has no driver File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 22
+Warning (10034): Output port "DRAM_WE_N" at de10lite_k5_xbox_wrap.sv(23) has no driver File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 23
+Info (12128): Elaborating entity "k5x_pll" for hierarchy "k5x_pll:k5x_pll" File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 119
+Info (12128): Elaborating entity "altpll" for hierarchy "k5x_pll:k5x_pll|altpll:altpll_component" File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/max10_k5x_pll/k5x_pll.v Line: 104
+Info (12130): Elaborated megafunction instantiation "k5x_pll:k5x_pll|altpll:altpll_component" File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/max10_k5x_pll/k5x_pll.v Line: 104
+Info (12133): Instantiated megafunction "k5x_pll:k5x_pll|altpll:altpll_component" with the following parameter: File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/max10_k5x_pll/k5x_pll.v Line: 104
+    Info (12134): Parameter "clk0_divide_by" = "50"
+    Info (12134): Parameter "clk0_multiply_by" = "50"
+    Info (12134): Parameter "bandwidth_type" = "AUTO"
+    Info (12134): Parameter "clk0_phase_shift" = "0"
+    Info (12134): Parameter "inclk0_input_frequency" = "20000"
+    Info (12134): Parameter "intended_device_family" = "MAX 10"
+    Info (12134): Parameter "lpm_hint" = "CBX_MODULE_PREFIX=k5x_pll"
+    Info (12134): Parameter "lpm_type" = "altpll"
+    Info (12134): Parameter "operation_mode" = "NO_COMPENSATION"
+    Info (12134): Parameter "pll_type" = "AUTO"
+    Info (12134): Parameter "port_activeclock" = "PORT_UNUSED"
+    Info (12134): Parameter "port_areset" = "PORT_USED"
+    Info (12134): Parameter "port_clkbad0" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkbad1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkloss" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkswitch" = "PORT_UNUSED"
+    Info (12134): Parameter "port_configupdate" = "PORT_UNUSED"
+    Info (12134): Parameter "port_fbin" = "PORT_UNUSED"
+    Info (12134): Parameter "port_inclk0" = "PORT_USED"
+    Info (12134): Parameter "port_inclk1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_locked" = "PORT_USED"
+    Info (12134): Parameter "port_pfdena" = "PORT_UNUSED"
+    Info (12134): Parameter "port_phasecounterselect" = "PORT_UNUSED"
+    Info (12134): Parameter "port_phasedone" = "PORT_UNUSED"
+    Info (12134): Parameter "port_phasestep" = "PORT_UNUSED"
+    Info (12134): Parameter "port_phaseupdown" = "PORT_UNUSED"
+    Info (12134): Parameter "port_pllena" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scanaclr" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scanclk" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scanclkena" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scandata" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scandataout" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scandone" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scanread" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scanwrite" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clk0" = "PORT_USED"
+    Info (12134): Parameter "port_clk1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clk2" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clk3" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clk4" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clk5" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena0" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena2" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena3" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena4" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena5" = "PORT_UNUSED"
+    Info (12134): Parameter "port_extclk0" = "PORT_UNUSED"
+    Info (12134): Parameter "port_extclk1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_extclk2" = "PORT_UNUSED"
+    Info (12134): Parameter "port_extclk3" = "PORT_UNUSED"
+    Info (12134): Parameter "self_reset_on_loss_lock" = "OFF"
+    Info (12134): Parameter "width_clock" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/k5x_pll_altpll.v
+    Info (12023): Found entity 1: k5x_pll_altpll File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/k5x_pll_altpll.v Line: 31
+Info (12128): Elaborating entity "k5x_pll_altpll" for hierarchy "k5x_pll:k5x_pll|altpll:altpll_component|k5x_pll_altpll:auto_generated" File: /data/project/tsmc65/shared/quartus_install/intelFPGA_lite/24.1std/quartus/libraries/megafunctions/altpll.tdf Line: 898
+Info (12128): Elaborating entity "reset_over_uart" for hierarchy "reset_over_uart:reset_over_uart" File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 129
+Warning (10230): Verilog HDL assignment warning at reset_over_uart.sv(38): truncated value with size 32 to match size of target (19) File: /project/tsmc65/shared/k5_share/kuntz5/fpga/src/reset_over_uart.sv Line: 38
+Info (12128): Elaborating entity "pulse_extender" for hierarchy "pulse_extender:pulse_extender" File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 146
+Warning (10230): Verilog HDL assignment warning at pulse_extender.sv(34): truncated value with size 32 to match size of target (3) File: /project/tsmc65/shared/k5_share/kuntz5/fpga/src/pulse_extender.sv Line: 34
+Warning (10230): Verilog HDL assignment warning at pulse_extender.sv(36): truncated value with size 32 to match size of target (3) File: /project/tsmc65/shared/k5_share/kuntz5/fpga/src/pulse_extender.sv Line: 36
+Warning (10230): Verilog HDL assignment warning at pulse_extender.sv(48): truncated value with size 32 to match size of target (4) File: /project/tsmc65/shared/k5_share/kuntz5/fpga/src/pulse_extender.sv Line: 48
+Warning (10230): Verilog HDL assignment warning at pulse_extender.sv(50): truncated value with size 32 to match size of target (4) File: /project/tsmc65/shared/k5_share/kuntz5/fpga/src/pulse_extender.sv Line: 50
+Info (12128): Elaborating entity "k5_xbox_sys" for hierarchy "k5_xbox_sys:k5_xbox_sys" File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 176
+Info (12128): Elaborating entity "k5_sys" for hierarchy "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys" File: /project/tsmc65/shared/k5_share/k5_xbox/hw/k5_xbox_sys.sv Line: 65
+Warning (10036): Verilog HDL or VHDL warning at k5_sys.sv(131): object "is_host_xspace_access_back" assigned a value but never read File: /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_sys.sv Line: 131
+Warning (10036): Verilog HDL or VHDL warning at k5_sys.sv(235): object "core_xmem_access" assigned a value but never read File: /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_sys.sv Line: 235
+Warning (10230): Verilog HDL assignment warning at k5_sys.sv(424): truncated value with size 32 to match size of target (4) File: /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_sys.sv Line: 424
+Warning (10230): Verilog HDL assignment warning at k5_sys.sv(500): truncated value with size 32 to match size of target (17) File: /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_sys.sv Line: 500
+Info (12128): Elaborating entity "k5_core" for hierarchy "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_core:k5_core" File: /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_sys.sv Line: 194
+Warning (10036): Verilog HDL or VHDL warning at k5_core.sv(113): object "pc_seq_tid" assigned a value but never read File: /project/tsmc65/shared/k5_share/kuntz5/src/core/k5_core.sv Line: 113
+Warning (10036): Verilog HDL or VHDL warning at k5_core.sv(119): object "pc_branch_tid" assigned a value but never read File: /project/tsmc65/shared/k5_share/kuntz5/src/core/k5_core.sv Line: 119
+Warning (10230): Verilog HDL assignment warning at k5_core.sv(373): truncated value with size 32 to match size of target (15) File: /project/tsmc65/shared/k5_share/kuntz5/src/core/k5_core.sv Line: 373
+Info (12128): Elaborating entity "k5_dx" for hierarchy "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_core:k5_core|k5_dx:k5_dx_i" File: /project/tsmc65/shared/k5_share/kuntz5/src/core/k5_core.sv Line: 328
+Info (12128): Elaborating entity "k5_dx_comb" for hierarchy "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_core:k5_core|k5_dx:k5_dx_i|k5_dx_comb:k5_dx_comb_i" File: /project/tsmc65/shared/k5_share/kuntz5/src/core/k5_dx.sv Line: 140
+Warning (10230): Verilog HDL assignment warning at k5_dx_comb.sv(214): truncated value with size 32 to match size of target (1) File: /project/tsmc65/shared/k5_share/kuntz5/src/core/k5_dx_comb.sv Line: 214
+Info (12128): Elaborating entity "mul_base" for hierarchy "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_core:k5_core|k5_dx:k5_dx_i|k5_dx_comb:k5_dx_comb_i|mul_base:mul_base" File: /project/tsmc65/shared/k5_share/kuntz5/src/core/k5_dx_comb.sv Line: 320
+Warning (10036): Verilog HDL or VHDL warning at mul_base.sv(18): object "alu_op_is_mul" assigned a value but never read File: /project/tsmc65/shared/k5_share/kuntz5/src/mul/rtl/mul_base.sv Line: 18
+Info (12128): Elaborating entity "mag_m1_32x32_r66" for hierarchy "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_core:k5_core|k5_dx:k5_dx_i|k5_dx_comb:k5_dx_comb_i|mul_base:mul_base|mag_m1_32x32_r66:mag_mul" File: /project/tsmc65/shared/k5_share/kuntz5/src/mul/rtl/mul_base.sv Line: 68
+Info (12128): Elaborating entity "AN2" for hierarchy "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_core:k5_core|k5_dx:k5_dx_i|k5_dx_comb:k5_dx_comb_i|mul_base:mul_base|mag_m1_32x32_r66:mag_mul|AN2:m0_a32sext" File: /project/tsmc65/shared/k5_share/kuntz5/src/mul/mag_mul/gen/mag_m1_32x32_r66.v Line: 3347
+Info (12128): Elaborating entity "FA" for hierarchy "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_core:k5_core|k5_dx:k5_dx_i|k5_dx_comb:k5_dx_comb_i|mul_base:mul_base|mag_m1_32x32_r66:mag_mul|FA:s1c1i0_ha" File: /project/tsmc65/shared/k5_share/kuntz5/src/mul/mag_mul/gen/mag_m1_32x32_r66.v Line: 3369
+Info (12128): Elaborating entity "ND2" for hierarchy "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_core:k5_core|k5_dx:k5_dx_i|k5_dx_comb:k5_dx_comb_i|mul_base:mul_base|mag_m1_32x32_r66:mag_mul|ND2:s0c32i0_nd2" File: /project/tsmc65/shared/k5_share/kuntz5/src/mul/mag_mul/gen/mag_m1_32x32_r66.v Line: 8707
+Info (12128): Elaborating entity "mul_final" for hierarchy "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_core:k5_core|mul_final:mul_final" File: /project/tsmc65/shared/k5_share/kuntz5/src/core/k5_core.sv Line: 471
+Info (12128): Elaborating entity "k5_tcm" for hierarchy "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem" File: /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_sys.sv Line: 223
+Warning (10230): Verilog HDL assignment warning at k5_tcm.sv(85): truncated value with size 32 to match size of target (14) File: /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_tcm.sv Line: 85
+Info (12128): Elaborating entity "k5_spram" for hierarchy "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_ewa" File: /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_tcm.sv Line: 127
+Info (12128): Elaborating entity "altera_spram_10240x32" for hierarchy "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_ewa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst" File: /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_spram.sv Line: 61
+Info (12128): Elaborating entity "altsyncram" for hierarchy "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_ewa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component" File: /project/tsmc65/shared/k5_share/kuntz5/fpga/src/altera_spram_10240x32.v Line: 92
+Info (12130): Elaborated megafunction instantiation "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_ewa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component" File: /project/tsmc65/shared/k5_share/kuntz5/fpga/src/altera_spram_10240x32.v Line: 92
+Info (12133): Instantiated megafunction "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_ewa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component" with the following parameter: File: /project/tsmc65/shared/k5_share/kuntz5/fpga/src/altera_spram_10240x32.v Line: 92
+    Info (12134): Parameter "byte_size" = "8"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "intended_device_family" = "MAX 10"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "10240"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "DONT_CARE"
+    Info (12134): Parameter "widthad_a" = "14"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_byteena_a" = "4"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_98h1.tdf
+    Info (12023): Found entity 1: altsyncram_98h1 File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 32
+Info (12128): Elaborating entity "altsyncram_98h1" for hierarchy "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_ewa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated" File: /data/project/tsmc65/shared/quartus_install/intelFPGA_lite/24.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_97a.tdf
+    Info (12023): Found entity 1: decode_97a File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/decode_97a.tdf Line: 23
+Info (12128): Elaborating entity "decode_97a" for hierarchy "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_ewa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|decode_97a:decode3" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 46
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_63b.tdf
+    Info (12023): Found entity 1: mux_63b File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/mux_63b.tdf Line: 23
+Info (12128): Elaborating entity "mux_63b" for hierarchy "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_ewa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|mux_63b:mux2" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 48
+Info (12128): Elaborating entity "k5_tcm" for hierarchy "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_dmem" File: /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_sys.sv Line: 277
+Warning (10230): Verilog HDL assignment warning at k5_tcm.sv(85): truncated value with size 32 to match size of target (12) File: /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_tcm.sv Line: 85
+Info (12128): Elaborating entity "k5_spram" for hierarchy "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_dmem|k5_spram:spram_ewa" File: /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_tcm.sv Line: 127
+Info (12128): Elaborating entity "altera_spram_4096x32" for hierarchy "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_dmem|k5_spram:spram_ewa|altera_spram_4096x32:spram_4096x32.altera_spram_4096x32_inst" File: /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_spram.sv Line: 48
+Warning (272007): Not using extra address lines in altsyncram megafunction design -- 4096 memory words in side A specified but total number of address lines is 13 File: /project/tsmc65/shared/k5_share/kuntz5/fpga/src/altera_spram_4096x32.v Line: 92
+Info (12128): Elaborating entity "altsyncram" for hierarchy "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_dmem|k5_spram:spram_ewa|altera_spram_4096x32:spram_4096x32.altera_spram_4096x32_inst|altsyncram:altsyncram_component" File: /project/tsmc65/shared/k5_share/kuntz5/fpga/src/altera_spram_4096x32.v Line: 92
+Info (12130): Elaborated megafunction instantiation "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_dmem|k5_spram:spram_ewa|altera_spram_4096x32:spram_4096x32.altera_spram_4096x32_inst|altsyncram:altsyncram_component" File: /project/tsmc65/shared/k5_share/kuntz5/fpga/src/altera_spram_4096x32.v Line: 92
+Info (12133): Instantiated megafunction "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_dmem|k5_spram:spram_ewa|altera_spram_4096x32:spram_4096x32.altera_spram_4096x32_inst|altsyncram:altsyncram_component" with the following parameter: File: /project/tsmc65/shared/k5_share/kuntz5/fpga/src/altera_spram_4096x32.v Line: 92
+    Info (12134): Parameter "byte_size" = "8"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "4096"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "DONT_CARE"
+    Info (12134): Parameter "widthad_a" = "13"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_byteena_a" = "4"
+Warning (287001): Assertion warning: Not using extra address lines in altsyncram megafunction design -- 4096 memory words in side A specified but total number of address lines is 13 File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_47h1.tdf Line: 756
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_47h1.tdf
+    Info (12023): Found entity 1: altsyncram_47h1 File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_47h1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_47h1" for hierarchy "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_dmem|k5_spram:spram_ewa|altera_spram_4096x32:spram_4096x32.altera_spram_4096x32_inst|altsyncram:altsyncram_component|altsyncram_47h1:auto_generated" File: /data/project/tsmc65/shared/quartus_install/intelFPGA_lite/24.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "k5_rmem" for hierarchy "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_rmem:k5_rmem" File: /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_sys.sv Line: 298
+Info (12128): Elaborating entity "k5_dpram" for hierarchy "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_rmem:k5_rmem|k5_dpram:dpram1" File: /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_rmem.sv Line: 41
+Info (12128): Elaborating entity "altera_dpram_256x32" for hierarchy "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_rmem:k5_rmem|k5_dpram:dpram1|altera_dpram_256x32:dpram_256x32.altera_dpram_256x32_inst" File: /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_dpram.sv Line: 38
+Info (12128): Elaborating entity "altsyncram" for hierarchy "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_rmem:k5_rmem|k5_dpram:dpram1|altera_dpram_256x32:dpram_256x32.altera_dpram_256x32_inst|altsyncram:altsyncram_component" File: /project/tsmc65/shared/k5_share/kuntz5/fpga/src/altera_dpram_256x32.v Line: 92
+Info (12130): Elaborated megafunction instantiation "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_rmem:k5_rmem|k5_dpram:dpram1|altera_dpram_256x32:dpram_256x32.altera_dpram_256x32_inst|altsyncram:altsyncram_component" File: /project/tsmc65/shared/k5_share/kuntz5/fpga/src/altera_dpram_256x32.v Line: 92
+Info (12133): Instantiated megafunction "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_rmem:k5_rmem|k5_dpram:dpram1|altera_dpram_256x32:dpram_256x32.altera_dpram_256x32_inst|altsyncram:altsyncram_component" with the following parameter: File: /project/tsmc65/shared/k5_share/kuntz5/fpga/src/altera_dpram_256x32.v Line: 92
+    Info (12134): Parameter "address_aclr_b" = "NONE"
+    Info (12134): Parameter "address_reg_b" = "CLOCK0"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_input_b" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_b" = "BYPASS"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "256"
+    Info (12134): Parameter "numwords_b" = "256"
+    Info (12134): Parameter "operation_mode" = "DUAL_PORT"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK0"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "widthad_a" = "8"
+    Info (12134): Parameter "widthad_b" = "8"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_b" = "32"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_vgq1.tdf
+    Info (12023): Found entity 1: altsyncram_vgq1 File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_vgq1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_vgq1" for hierarchy "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_rmem:k5_rmem|k5_dpram:dpram1|altera_dpram_256x32:dpram_256x32.altera_dpram_256x32_inst|altsyncram:altsyncram_component|altsyncram_vgq1:auto_generated" File: /data/project/tsmc65/shared/quartus_install/intelFPGA_lite/24.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "k5_confmem" for hierarchy "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_confmem:k5_confimem" File: /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_sys.sv Line: 318
+Info (12128): Elaborating entity "k5_dpram" for hierarchy "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_confmem:k5_confimem|k5_dpram:dpram" File: /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_confmem.sv Line: 34
+Info (12128): Elaborating entity "altera_dpram_8x32" for hierarchy "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_confmem:k5_confimem|k5_dpram:dpram|altera_dpram_8x32:dpram_8x32.altera_dpram_8x32_inst" File: /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_dpram.sv Line: 51
+Info (12128): Elaborating entity "altsyncram" for hierarchy "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_confmem:k5_confimem|k5_dpram:dpram|altera_dpram_8x32:dpram_8x32.altera_dpram_8x32_inst|altsyncram:altsyncram_component" File: /project/tsmc65/shared/k5_share/kuntz5/fpga/src/altera_dpram_8x32.v Line: 95
+Info (12130): Elaborated megafunction instantiation "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_confmem:k5_confimem|k5_dpram:dpram|altera_dpram_8x32:dpram_8x32.altera_dpram_8x32_inst|altsyncram:altsyncram_component" File: /project/tsmc65/shared/k5_share/kuntz5/fpga/src/altera_dpram_8x32.v Line: 95
+Info (12133): Instantiated megafunction "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_confmem:k5_confimem|k5_dpram:dpram|altera_dpram_8x32:dpram_8x32.altera_dpram_8x32_inst|altsyncram:altsyncram_component" with the following parameter: File: /project/tsmc65/shared/k5_share/kuntz5/fpga/src/altera_dpram_8x32.v Line: 95
+    Info (12134): Parameter "address_aclr_b" = "NONE"
+    Info (12134): Parameter "address_reg_b" = "CLOCK0"
+    Info (12134): Parameter "byte_size" = "8"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_input_b" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_b" = "BYPASS"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "8"
+    Info (12134): Parameter "numwords_b" = "8"
+    Info (12134): Parameter "operation_mode" = "DUAL_PORT"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK0"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "widthad_a" = "3"
+    Info (12134): Parameter "widthad_b" = "3"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_b" = "32"
+    Info (12134): Parameter "width_byteena_a" = "4"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_pbs1.tdf
+    Info (12023): Found entity 1: altsyncram_pbs1 File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_pbs1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_pbs1" for hierarchy "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_confmem:k5_confimem|k5_dpram:dpram|altera_dpram_8x32:dpram_8x32.altera_dpram_8x32_inst|altsyncram:altsyncram_component|altsyncram_pbs1:auto_generated" File: /data/project/tsmc65/shared/quartus_install/intelFPGA_lite/24.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "k5_pcmem" for hierarchy "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_pcmem:k5_pcmem" File: /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_sys.sv Line: 370
+Info (12128): Elaborating entity "k5_sch" for hierarchy "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_sch:k5_sch" File: /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_sys.sv Line: 398
+Warning (10230): Verilog HDL assignment warning at k5_sch.sv(57): truncated value with size 32 to match size of target (3) File: /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_sch.sv Line: 57
+Warning (10230): Verilog HDL assignment warning at k5_sch.sv(60): truncated value with size 32 to match size of target (3) File: /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_sch.sv Line: 60
+Info (12128): Elaborating entity "k5_sys_access" for hierarchy "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_sys_access:k5_sys_access" File: /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_sys.sv Line: 457
+Info (12128): Elaborating entity "k5_uart_remote_access_intrfc" for hierarchy "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_sys_access:k5_sys_access|k5_uart_remote_access_intrfc:remote_access_intrfc" File: /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_sys_access.sv Line: 55
+Warning (12158): Entity "k5_uart_remote_access_intrfc" contains only dangling pins File: /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_sys_access.sv Line: 55
+Info (12128): Elaborating entity "k5_uart_access" for hierarchy "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_sys_access:k5_sys_access|k5_uart_access:k5_uart_access" File: /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_sys_access.sv Line: 67
+Warning (10230): Verilog HDL assignment warning at k5_uart_access.sv(133): truncated value with size 32 to match size of target (4) File: /project/tsmc65/shared/k5_share/kuntz5/src/uart_access/k5_uart_access.sv Line: 133
+Warning (10230): Verilog HDL assignment warning at k5_uart_access.sv(169): truncated value with size 32 to match size of target (4) File: /project/tsmc65/shared/k5_share/kuntz5/src/uart_access/k5_uart_access.sv Line: 169
+Warning (10230): Verilog HDL assignment warning at k5_uart_access.sv(210): truncated value with size 32 to match size of target (4) File: /project/tsmc65/shared/k5_share/kuntz5/src/uart_access/k5_uart_access.sv Line: 210
+Info (12128): Elaborating entity "uart_rx" for hierarchy "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_sys_access:k5_sys_access|k5_uart_access:k5_uart_access|uart_rx:uart_rx_i" File: /project/tsmc65/shared/k5_share/kuntz5/src/uart_access/k5_uart_access.sv Line: 82
+Warning (10230): Verilog HDL assignment warning at k5_uart_rx.sv(127): truncated value with size 32 to match size of target (3) File: /project/tsmc65/shared/k5_share/kuntz5/src/uart_access/k5_uart_rx.sv Line: 127
+Warning (10230): Verilog HDL assignment warning at k5_uart_rx.sv(225): truncated value with size 32 to match size of target (16) File: /project/tsmc65/shared/k5_share/kuntz5/src/uart_access/k5_uart_rx.sv Line: 225
+Info (12128): Elaborating entity "uart_tx" for hierarchy "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_sys_access:k5_sys_access|k5_uart_access:k5_uart_access|uart_tx:uart_tx_i" File: /project/tsmc65/shared/k5_share/kuntz5/src/uart_access/k5_uart_access.sv Line: 111
+Warning (10230): Verilog HDL assignment warning at k5_uart_tx.sv(115): truncated value with size 32 to match size of target (3) File: /project/tsmc65/shared/k5_share/kuntz5/src/uart_access/k5_uart_tx.sv Line: 115
+Warning (10230): Verilog HDL assignment warning at k5_uart_tx.sv(201): truncated value with size 32 to match size of target (16) File: /project/tsmc65/shared/k5_share/kuntz5/src/uart_access/k5_uart_tx.sv Line: 201
+Info (12128): Elaborating entity "k5_sys_regs_mem_access" for hierarchy "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_sys_access:k5_sys_access|k5_sys_regs_mem_access:k5_sys_regs_mem_access" File: /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_sys_access.sv Line: 94
+Info (12128): Elaborating entity "k5_com" for hierarchy "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_sys_access:k5_sys_access|k5_sys_regs_mem_access:k5_sys_regs_mem_access|k5_com:k5_com" File: /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_sys_regs_mem_access.sv Line: 153
+Warning (10230): Verilog HDL assignment warning at k5_com.sv(19): truncated value with size 32 to match size of target (8) File: /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_com.sv Line: 19
+Info (12128): Elaborating entity "xbox" for hierarchy "k5_xbox_sys:k5_xbox_sys|xbox:xbox" File: /project/tsmc65/shared/k5_share/k5_xbox/hw/k5_xbox_sys.sv Line: 82
+Warning (10230): Verilog HDL assignment warning at xbox.sv(52): truncated value with size 32 to match size of target (4) File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox.sv Line: 52
+Warning (10230): Verilog HDL assignment warning at xbox.sv(78): truncated value with size 32 to match size of target (16) File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox.sv Line: 78
+Warning (10230): Verilog HDL assignment warning at xbox.sv(79): truncated value with size 32 to match size of target (16) File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox.sv Line: 79
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "xlr_mem_wdata" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "xlr_mem_rdata" into its bus
+Info (12128): Elaborating entity "xbox_mfarm" for hierarchy "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_mfarm:xbox_mfarm" File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox.sv Line: 131
+Warning (10036): Verilog HDL or VHDL warning at xbox_mfarm.sv(44): object "soc_be" assigned a value but never read File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_mfarm.sv Line: 44
+Warning (10230): Verilog HDL assignment warning at xbox_mfarm.sv(49): truncated value with size 32 to match size of target (5) File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_mfarm.sv Line: 49
+Warning (10230): Verilog HDL assignment warning at xbox_mfarm.sv(78): truncated value with size 32 to match size of target (11) File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_mfarm.sv Line: 78
+Warning (10230): Verilog HDL assignment warning at xbox_mfarm.sv(175): truncated value with size 11 to match size of target (10) File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_mfarm.sv Line: 175
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "xlr_mem_wdata" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "xlr_mem_rdata" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "mem_inst_data_out" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "xlr_mem_wdata" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "xlr_mem_rdata" into its bus
+Info (12128): Elaborating entity "xmem_spram" for hierarchy "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_mfarm:xbox_mfarm|xmem_spram:mem_inst[0].sp_ram_x256_be" File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_mfarm.sv Line: 209
+Warning (10036): Verilog HDL or VHDL warning at xmem_spram.sv(16): object "rden" assigned a value but never read File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xmem_spram.sv Line: 16
+Info (12128): Elaborating entity "altera_sp_ram_1024x256_be" for hierarchy "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_mfarm:xbox_mfarm|xmem_spram:mem_inst[0].sp_ram_x256_be|altera_sp_ram_1024x256_be:spram_1024x256.altera_spram_1024x256_inst" File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xmem_spram.sv Line: 32
+Info (12128): Elaborating entity "altsyncram" for hierarchy "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_mfarm:xbox_mfarm|xmem_spram:mem_inst[0].sp_ram_x256_be|altera_sp_ram_1024x256_be:spram_1024x256.altera_spram_1024x256_inst|altsyncram:altsyncram_component" File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/xbox_altera_mems/altera_sp_ram_1024x256_be.v Line: 91
+Info (12130): Elaborated megafunction instantiation "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_mfarm:xbox_mfarm|xmem_spram:mem_inst[0].sp_ram_x256_be|altera_sp_ram_1024x256_be:spram_1024x256.altera_spram_1024x256_inst|altsyncram:altsyncram_component" File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/xbox_altera_mems/altera_sp_ram_1024x256_be.v Line: 91
+Info (12133): Instantiated megafunction "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_mfarm:xbox_mfarm|xmem_spram:mem_inst[0].sp_ram_x256_be|altera_sp_ram_1024x256_be:spram_1024x256.altera_spram_1024x256_inst|altsyncram:altsyncram_component" with the following parameter: File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/xbox_altera_mems/altera_sp_ram_1024x256_be.v Line: 91
+    Info (12134): Parameter "byte_size" = "8"
+    Info (12134): Parameter "clock_enable_input_a" = "NORMAL"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "1024"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "widthad_a" = "10"
+    Info (12134): Parameter "width_a" = "256"
+    Info (12134): Parameter "width_byteena_a" = "32"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_qhi1.tdf
+    Info (12023): Found entity 1: altsyncram_qhi1 File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_qhi1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_qhi1" for hierarchy "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_mfarm:xbox_mfarm|xmem_spram:mem_inst[0].sp_ram_x256_be|altera_sp_ram_1024x256_be:spram_1024x256.altera_spram_1024x256_inst|altsyncram:altsyncram_component|altsyncram_qhi1:auto_generated" File: /data/project/tsmc65/shared/quartus_install/intelFPGA_lite/24.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "xbox_xlr_wrap" for hierarchy "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap" File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox.sv Line: 163
+Warning (10036): Verilog HDL or VHDL warning at xbox_xlr_wrap.sv(53): object "trig_soc_xmem_wr_addr" assigned a value but never read File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlr_wrap.sv Line: 53
+Warning (10036): Verilog HDL or VHDL warning at xbox_xlr_wrap.sv(54): object "trig_soc_xmem_wr" assigned a value but never read File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlr_wrap.sv Line: 54
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "xlr_mem_wdata" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "xlr_mem_rdata" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "xi_mem_wdata" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "xlr_mnx_from_mem" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "xlr_mem_wdata" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "xlr_mem_rdata" into its bus
+Info (12128): Elaborating entity "MANNIX_MEM_IFC" for hierarchy "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|MANNIX_MEM_IFC:mannix_mem_ifc" File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlr_wrap.sv Line: 76
+Warning (12158): Entity "MANNIX_MEM_IFC" contains only dangling pins File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlr_wrap.sv Line: 76
+Info (12128): Elaborating entity "mem_intf_read" for hierarchy "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|mem_intf_read:mem_intf_read" File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlr_wrap.sv Line: 92
+Warning (12158): Entity "mem_intf_read" contains only dangling pins File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlr_wrap.sv Line: 92
+Info (12128): Elaborating entity "mem_intf_write" for hierarchy "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|mem_intf_write:mem_intf_write" File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlr_wrap.sv Line: 93
+Warning (12158): Entity "mem_intf_write" contains only dangling pins File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlr_wrap.sv Line: 93
+Info (12128): Elaborating entity "slrx" for hierarchy "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx" File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlr_wrap.sv Line: 108
+Warning (10036): Verilog HDL or VHDL warning at slrx.sv(32): object "acc_sel" assigned a value but never read File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/top/slrx.sv Line: 32
+Warning (10230): Verilog HDL assignment warning at slrx.sv(32): truncated value with size 32 to match size of target (1) File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/top/slrx.sv Line: 32
+Info (12128): Elaborating entity "slrx_regs_intrf" for hierarchy "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|slrx_regs_intrf:slrx_regs_intrf_conv" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/top/slrx.sv Line: 24
+Warning (12158): Entity "slrx_regs_intrf" contains only dangling pins File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/top/slrx.sv Line: 24
+Info (12128): Elaborating entity "conv" for hierarchy "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|conv:conv" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/top/slrx.sv Line: 126
+Warning (10230): Verilog HDL assignment warning at conv.sv(80): truncated value with size 32 to match size of target (16) File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 80
+Warning (10230): Verilog HDL assignment warning at conv.sv(81): truncated value with size 32 to match size of target (16) File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 81
+Warning (10230): Verilog HDL assignment warning at conv.sv(82): truncated value with size 32 to match size of target (16) File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 82
+Warning (10230): Verilog HDL assignment warning at conv.sv(83): truncated value with size 32 to match size of target (6) File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 83
+Warning (10230): Verilog HDL assignment warning at conv.sv(84): truncated value with size 32 to match size of target (6) File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 84
+Warning (10230): Verilog HDL assignment warning at conv.sv(136): truncated value with size 32 to match size of target (6) File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 136
+Warning (10230): Verilog HDL assignment warning at conv.sv(171): truncated value with size 32 to match size of target (16) File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 171
+Warning (10230): Verilog HDL assignment warning at conv.sv(182): truncated value with size 32 to match size of target (16) File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 182
+Warning (10230): Verilog HDL assignment warning at conv.sv(193): truncated value with size 32 to match size of target (16) File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 193
+Warning (10230): Verilog HDL assignment warning at conv.sv(260): truncated value with size 32 to match size of target (5) File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 260
+Warning (10230): Verilog HDL assignment warning at conv.sv(268): truncated value with size 32 to match size of target (5) File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 268
+Warning (10230): Verilog HDL assignment warning at conv.sv(288): truncated value with size 32 to match size of target (6) File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 288
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "calc_conv_element.kernel" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "calc_conv_element.win" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "kernel_cache" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "kernel_cache_ps" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "row_cache" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "row_cache_ps" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "window" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "window_ps" into its bus
+Info (12128): Elaborating entity "pool" for hierarchy "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|pool:pool" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/top/slrx.sv Line: 152
+Warning (10036): Verilog HDL or VHDL warning at pool.sv(39): object "arr_in_next_row_addr_s" assigned a value but never read File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/pool/pool.sv Line: 39
+Warning (10230): Verilog HDL assignment warning at pool.sv(58): truncated value with size 32 to match size of target (16) File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/pool/pool.sv Line: 58
+Warning (10230): Verilog HDL assignment warning at pool.sv(59): truncated value with size 32 to match size of target (16) File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/pool/pool.sv Line: 59
+Warning (10230): Verilog HDL assignment warning at pool.sv(60): truncated value with size 32 to match size of target (6) File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/pool/pool.sv Line: 60
+Warning (10230): Verilog HDL assignment warning at pool.sv(61): truncated value with size 32 to match size of target (5) File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/pool/pool.sv Line: 61
+Warning (10230): Verilog HDL assignment warning at pool.sv(63): truncated value with size 32 to match size of target (6) File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/pool/pool.sv Line: 63
+Warning (10230): Verilog HDL assignment warning at pool.sv(91): truncated value with size 32 to match size of target (16) File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/pool/pool.sv Line: 91
+Warning (10230): Verilog HDL assignment warning at pool.sv(115): truncated value with size 32 to match size of target (8) File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/pool/pool.sv Line: 115
+Warning (10230): Verilog HDL assignment warning at pool.sv(120): truncated value with size 32 to match size of target (5) File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/pool/pool.sv Line: 120
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "calc_pool_win.pool_in_buf" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "pool_in_buf" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "pool_in_buf_ps" into its bus
+Info (12128): Elaborating entity "linear" for hierarchy "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|linear:linear" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/top/slrx.sv Line: 178
+Warning (10036): Verilog HDL or VHDL warning at linear.sv(43): object "lin_arr_out_dim" assigned a value but never read File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 43
+Warning (10230): Verilog HDL assignment warning at linear.sv(66): truncated value with size 32 to match size of target (16) File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 66
+Warning (10230): Verilog HDL assignment warning at linear.sv(67): truncated value with size 32 to match size of target (16) File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 67
+Warning (10230): Verilog HDL assignment warning at linear.sv(69): truncated value with size 32 to match size of target (16) File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 69
+Warning (10230): Verilog HDL assignment warning at linear.sv(70): truncated value with size 32 to match size of target (16) File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 70
+Warning (10230): Verilog HDL assignment warning at linear.sv(71): truncated value with size 32 to match size of target (6) File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 71
+Warning (10230): Verilog HDL assignment warning at linear.sv(72): truncated value with size 32 to match size of target (6) File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 72
+Warning (10230): Verilog HDL assignment warning at linear.sv(73): truncated value with size 32 to match size of target (5) File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 73
+Warning (10230): Verilog HDL assignment warning at linear.sv(104): truncated value with size 32 to match size of target (16) File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 104
+Warning (10230): Verilog HDL assignment warning at linear.sv(122): truncated value with size 32 to match size of target (8) File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 122
+Warning (10230): Verilog HDL assignment warning at linear.sv(135): truncated value with size 32 to match size of target (8) File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 135
+Info (12128): Elaborating entity "xmem_intf_mux" for hierarchy "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|xmem_intf_mux:xmem_intf_mux" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/top/slrx.sv Line: 204
+Info (12128): Elaborating entity "mannix_mem_farm_lite" for hierarchy "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|mannix_mem_farm_lite:i_mannix_mem_farm" File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlr_wrap.sv Line: 127
+Warning (10230): Verilog HDL assignment warning at mannix_mem_farm_lite.sv(80): truncated value with size 32 to match size of target (16) File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlrs/mem/mannix_mem_farm_lite.sv Line: 80
+Warning (10230): Verilog HDL assignment warning at mannix_mem_farm_lite.sv(81): truncated value with size 32 to match size of target (16) File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlrs/mem/mannix_mem_farm_lite.sv Line: 81
+Warning (10027): Verilog HDL or VHDL warning at the mannix_mem_farm_lite.sv(102): index expression is not wide enough to address all of the elements in the array File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlrs/mem/mannix_mem_farm_lite.sv Line: 102
+Warning (10230): Verilog HDL assignment warning at mannix_mem_farm_lite.sv(111): truncated value with size 32 to match size of target (1) File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlrs/mem/mannix_mem_farm_lite.sv Line: 111
+Warning (10027): Verilog HDL or VHDL warning at the mannix_mem_farm_lite.sv(125): index expression is not wide enough to address all of the elements in the array File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlrs/mem/mannix_mem_farm_lite.sv Line: 125
+Warning (10230): Verilog HDL assignment warning at mannix_mem_farm_lite.sv(128): truncated value with size 512 to match size of target (256) File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlrs/mem/mannix_mem_farm_lite.sv Line: 128
+Warning (10030): Net "wr_data_64bytes_shifted[63]" at mannix_mem_farm_lite.sv(94) has no driver or initial value, using a default initial value '0' File: /project/tsmc65/shared/k5_share/k5_xbox/hw/xbox/xbox_xlrs/mem/mannix_mem_farm_lite.sv Line: 94
+Info (12128): Elaborating entity "Reset_Delay" for hierarchy "Reset_Delay:r0" File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 255
+Warning (10230): Verilog HDL assignment warning at Reset_Delay.v(10): truncated value with size 32 to match size of target (20) File: /project/tsmc65/shared/k5_share/kuntz5/fpga/gen_de10lite/DE10Lite_vlib/Reset_Delay.v Line: 10
+Warning (12010): Port "address" on the entity instantiation of "spram_4096x32.altera_spram_4096x32_inst" is connected to a signal of width 12. The formal width of the signal in the module is 13.  The extra bits will be driven by GND. File: /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_spram.sv Line: 48
+Warning (12010): Port "address_a" on the entity instantiation of "altsyncram_component" is connected to a signal of width 13. The formal width of the signal in the module is 14.  The extra bits will be driven by GND. File: /project/tsmc65/shared/k5_share/kuntz5/fpga/src/altera_spram_10240x32.v Line: 92
+Warning (12020): Port "address" on the entity instantiation of "spram_10240x32.altera_spram_10240x32_inst" is connected to a signal of width 14. The formal width of the signal in the module is 13.  The extra bits will be ignored. File: /project/tsmc65/shared/k5_share/kuntz5/src/sys/k5_spram.sv Line: 61
+Warning (12010): Port "address_a" on the entity instantiation of "altsyncram_component" is connected to a signal of width 13. The formal width of the signal in the module is 14.  The extra bits will be driven by GND. File: /project/tsmc65/shared/k5_share/kuntz5/fpga/src/altera_spram_10240x32.v Line: 92
+Warning (12161): Node "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|slrx_regs_intrf:slrx_regs_intrf_conv|slrx_regs_intrf.xlr_start" is stuck at GND because node is in wire loop and does not have a source File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/top/slrx_regs_intrf.sv Line: 4
+Warning (12161): Node "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|slrx_regs_intrf:slrx_regs_intrf_conv|slrx_regs_intrf.slrx_cmd[2]" is stuck at GND because node is in wire loop and does not have a source File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/top/slrx_regs_intrf.sv Line: 4
+Warning (12161): Node "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|slrx_regs_intrf:slrx_regs_intrf_conv|slrx_regs_intrf.slrx_cmd[1]" is stuck at GND because node is in wire loop and does not have a source File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/top/slrx_regs_intrf.sv Line: 4
+Warning (12161): Node "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|slrx_regs_intrf:slrx_regs_intrf_conv|slrx_regs_intrf.slrx_cmd[0]" is stuck at GND because node is in wire loop and does not have a source File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/top/slrx_regs_intrf.sv Line: 4
+Warning (12161): Node "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|slrx_regs_intrf:slrx_regs_intrf_pool|slrx_regs_intrf.xlr_start" is stuck at GND because node is in wire loop and does not have a source File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/top/slrx_regs_intrf.sv Line: 4
+Warning (12161): Node "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|slrx_regs_intrf:slrx_regs_intrf_pool|slrx_regs_intrf.slrx_cmd[2]" is stuck at GND because node is in wire loop and does not have a source File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/top/slrx_regs_intrf.sv Line: 4
+Warning (12161): Node "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|slrx_regs_intrf:slrx_regs_intrf_pool|slrx_regs_intrf.slrx_cmd[1]" is stuck at GND because node is in wire loop and does not have a source File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/top/slrx_regs_intrf.sv Line: 4
+Warning (12161): Node "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|slrx_regs_intrf:slrx_regs_intrf_pool|slrx_regs_intrf.slrx_cmd[0]" is stuck at GND because node is in wire loop and does not have a source File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/top/slrx_regs_intrf.sv Line: 4
+Warning (12161): Node "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|slrx_regs_intrf:slrx_regs_intrf_lin|slrx_regs_intrf.xlr_start" is stuck at GND because node is in wire loop and does not have a source File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/top/slrx_regs_intrf.sv Line: 4
+Warning (12161): Node "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|slrx_regs_intrf:slrx_regs_intrf_lin|slrx_regs_intrf.slrx_cmd[2]" is stuck at GND because node is in wire loop and does not have a source File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/top/slrx_regs_intrf.sv Line: 4
+Warning (12161): Node "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|slrx_regs_intrf:slrx_regs_intrf_lin|slrx_regs_intrf.slrx_cmd[1]" is stuck at GND because node is in wire loop and does not have a source File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/top/slrx_regs_intrf.sv Line: 4
+Warning (12161): Node "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|slrx_regs_intrf:slrx_regs_intrf_lin|slrx_regs_intrf.slrx_cmd[0]" is stuck at GND because node is in wire loop and does not have a source File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/top/slrx_regs_intrf.sv Line: 4
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_confmem:k5_confdmem|k5_dpram:dpram|altera_dpram_8x32:dpram_8x32.altera_dpram_8x32_inst|altsyncram:altsyncram_component|altsyncram_pbs1:auto_generated|q_b[15]" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_pbs1.tdf Line: 505
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_confmem:k5_confdmem|k5_dpram:dpram|altera_dpram_8x32:dpram_8x32.altera_dpram_8x32_inst|altsyncram:altsyncram_component|altsyncram_pbs1:auto_generated|q_b[16]" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_pbs1.tdf Line: 536
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_confmem:k5_confdmem|k5_dpram:dpram|altera_dpram_8x32:dpram_8x32.altera_dpram_8x32_inst|altsyncram:altsyncram_component|altsyncram_pbs1:auto_generated|q_b[17]" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_pbs1.tdf Line: 567
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_confmem:k5_confdmem|k5_dpram:dpram|altera_dpram_8x32:dpram_8x32.altera_dpram_8x32_inst|altsyncram:altsyncram_component|altsyncram_pbs1:auto_generated|q_b[18]" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_pbs1.tdf Line: 598
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_confmem:k5_confdmem|k5_dpram:dpram|altera_dpram_8x32:dpram_8x32.altera_dpram_8x32_inst|altsyncram:altsyncram_component|altsyncram_pbs1:auto_generated|q_b[19]" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_pbs1.tdf Line: 629
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_confmem:k5_confdmem|k5_dpram:dpram|altera_dpram_8x32:dpram_8x32.altera_dpram_8x32_inst|altsyncram:altsyncram_component|altsyncram_pbs1:auto_generated|q_b[20]" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_pbs1.tdf Line: 660
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_confmem:k5_confdmem|k5_dpram:dpram|altera_dpram_8x32:dpram_8x32.altera_dpram_8x32_inst|altsyncram:altsyncram_component|altsyncram_pbs1:auto_generated|q_b[21]" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_pbs1.tdf Line: 691
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_confmem:k5_confdmem|k5_dpram:dpram|altera_dpram_8x32:dpram_8x32.altera_dpram_8x32_inst|altsyncram:altsyncram_component|altsyncram_pbs1:auto_generated|q_b[22]" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_pbs1.tdf Line: 722
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_confmem:k5_confdmem|k5_dpram:dpram|altera_dpram_8x32:dpram_8x32.altera_dpram_8x32_inst|altsyncram:altsyncram_component|altsyncram_pbs1:auto_generated|q_b[23]" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_pbs1.tdf Line: 753
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_confmem:k5_confdmem|k5_dpram:dpram|altera_dpram_8x32:dpram_8x32.altera_dpram_8x32_inst|altsyncram:altsyncram_component|altsyncram_pbs1:auto_generated|q_b[24]" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_pbs1.tdf Line: 784
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_confmem:k5_confdmem|k5_dpram:dpram|altera_dpram_8x32:dpram_8x32.altera_dpram_8x32_inst|altsyncram:altsyncram_component|altsyncram_pbs1:auto_generated|q_b[25]" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_pbs1.tdf Line: 815
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_confmem:k5_confdmem|k5_dpram:dpram|altera_dpram_8x32:dpram_8x32.altera_dpram_8x32_inst|altsyncram:altsyncram_component|altsyncram_pbs1:auto_generated|q_b[26]" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_pbs1.tdf Line: 846
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_confmem:k5_confdmem|k5_dpram:dpram|altera_dpram_8x32:dpram_8x32.altera_dpram_8x32_inst|altsyncram:altsyncram_component|altsyncram_pbs1:auto_generated|q_b[27]" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_pbs1.tdf Line: 877
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_confmem:k5_confdmem|k5_dpram:dpram|altera_dpram_8x32:dpram_8x32.altera_dpram_8x32_inst|altsyncram:altsyncram_component|altsyncram_pbs1:auto_generated|q_b[28]" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_pbs1.tdf Line: 908
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_confmem:k5_confdmem|k5_dpram:dpram|altera_dpram_8x32:dpram_8x32.altera_dpram_8x32_inst|altsyncram:altsyncram_component|altsyncram_pbs1:auto_generated|q_b[29]" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_pbs1.tdf Line: 939
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_confmem:k5_confdmem|k5_dpram:dpram|altera_dpram_8x32:dpram_8x32.altera_dpram_8x32_inst|altsyncram:altsyncram_component|altsyncram_pbs1:auto_generated|q_b[30]" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_pbs1.tdf Line: 970
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_confmem:k5_confdmem|k5_dpram:dpram|altera_dpram_8x32:dpram_8x32.altera_dpram_8x32_inst|altsyncram:altsyncram_component|altsyncram_pbs1:auto_generated|q_b[31]" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_pbs1.tdf Line: 1001
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_confmem:k5_confimem|k5_dpram:dpram|altera_dpram_8x32:dpram_8x32.altera_dpram_8x32_inst|altsyncram:altsyncram_component|altsyncram_pbs1:auto_generated|q_b[17]" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_pbs1.tdf Line: 567
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_confmem:k5_confimem|k5_dpram:dpram|altera_dpram_8x32:dpram_8x32.altera_dpram_8x32_inst|altsyncram:altsyncram_component|altsyncram_pbs1:auto_generated|q_b[18]" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_pbs1.tdf Line: 598
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_confmem:k5_confimem|k5_dpram:dpram|altera_dpram_8x32:dpram_8x32.altera_dpram_8x32_inst|altsyncram:altsyncram_component|altsyncram_pbs1:auto_generated|q_b[19]" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_pbs1.tdf Line: 629
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_confmem:k5_confimem|k5_dpram:dpram|altera_dpram_8x32:dpram_8x32.altera_dpram_8x32_inst|altsyncram:altsyncram_component|altsyncram_pbs1:auto_generated|q_b[20]" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_pbs1.tdf Line: 660
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_confmem:k5_confimem|k5_dpram:dpram|altera_dpram_8x32:dpram_8x32.altera_dpram_8x32_inst|altsyncram:altsyncram_component|altsyncram_pbs1:auto_generated|q_b[21]" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_pbs1.tdf Line: 691
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_confmem:k5_confimem|k5_dpram:dpram|altera_dpram_8x32:dpram_8x32.altera_dpram_8x32_inst|altsyncram:altsyncram_component|altsyncram_pbs1:auto_generated|q_b[22]" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_pbs1.tdf Line: 722
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_confmem:k5_confimem|k5_dpram:dpram|altera_dpram_8x32:dpram_8x32.altera_dpram_8x32_inst|altsyncram:altsyncram_component|altsyncram_pbs1:auto_generated|q_b[23]" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_pbs1.tdf Line: 753
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_confmem:k5_confimem|k5_dpram:dpram|altera_dpram_8x32:dpram_8x32.altera_dpram_8x32_inst|altsyncram:altsyncram_component|altsyncram_pbs1:auto_generated|q_b[24]" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_pbs1.tdf Line: 784
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_confmem:k5_confimem|k5_dpram:dpram|altera_dpram_8x32:dpram_8x32.altera_dpram_8x32_inst|altsyncram:altsyncram_component|altsyncram_pbs1:auto_generated|q_b[25]" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_pbs1.tdf Line: 815
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_confmem:k5_confimem|k5_dpram:dpram|altera_dpram_8x32:dpram_8x32.altera_dpram_8x32_inst|altsyncram:altsyncram_component|altsyncram_pbs1:auto_generated|q_b[26]" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_pbs1.tdf Line: 846
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_confmem:k5_confimem|k5_dpram:dpram|altera_dpram_8x32:dpram_8x32.altera_dpram_8x32_inst|altsyncram:altsyncram_component|altsyncram_pbs1:auto_generated|q_b[27]" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_pbs1.tdf Line: 877
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_confmem:k5_confimem|k5_dpram:dpram|altera_dpram_8x32:dpram_8x32.altera_dpram_8x32_inst|altsyncram:altsyncram_component|altsyncram_pbs1:auto_generated|q_b[28]" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_pbs1.tdf Line: 908
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_confmem:k5_confimem|k5_dpram:dpram|altera_dpram_8x32:dpram_8x32.altera_dpram_8x32_inst|altsyncram:altsyncram_component|altsyncram_pbs1:auto_generated|q_b[29]" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_pbs1.tdf Line: 939
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_confmem:k5_confimem|k5_dpram:dpram|altera_dpram_8x32:dpram_8x32.altera_dpram_8x32_inst|altsyncram:altsyncram_component|altsyncram_pbs1:auto_generated|q_b[30]" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_pbs1.tdf Line: 970
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_confmem:k5_confimem|k5_dpram:dpram|altera_dpram_8x32:dpram_8x32.altera_dpram_8x32_inst|altsyncram:altsyncram_component|altsyncram_pbs1:auto_generated|q_b[31]" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_pbs1.tdf Line: 1001
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_owa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a32" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 721
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_owa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a33" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 742
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_owa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a34" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 763
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_owa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a35" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 784
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_owa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a36" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 805
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_owa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a37" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 826
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_owa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a38" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 847
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_owa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a39" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 868
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_owa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a40" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 889
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_owa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a41" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 910
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_owa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a42" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 931
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_owa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a43" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 952
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_owa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a44" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 973
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_owa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a45" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 994
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_owa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a46" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 1015
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_owa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a47" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 1036
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_owa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a48" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 1057
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_owa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a49" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 1078
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_owa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a50" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 1099
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_owa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a51" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 1120
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_owa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a52" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 1141
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_owa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a53" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 1162
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_owa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a54" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 1183
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_owa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a55" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 1204
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_owa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a56" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 1225
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_owa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a57" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 1246
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_owa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a58" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 1267
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_owa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a59" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 1288
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_owa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a60" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 1309
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_owa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a61" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 1330
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_owa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a62" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 1351
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_owa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a63" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 1372
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_ewa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a32" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 721
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_ewa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a33" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 742
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_ewa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a34" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 763
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_ewa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a35" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 784
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_ewa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a36" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 805
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_ewa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a37" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 826
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_ewa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a38" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 847
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_ewa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a39" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 868
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_ewa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a40" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 889
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_ewa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a41" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 910
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_ewa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a42" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 931
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_ewa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a43" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 952
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_ewa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a44" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 973
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_ewa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a45" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 994
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_ewa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a46" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 1015
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_ewa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a47" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 1036
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_ewa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a48" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 1057
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_ewa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a49" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 1078
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_ewa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a50" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 1099
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_ewa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a51" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 1120
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_ewa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a52" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 1141
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_ewa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a53" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 1162
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_ewa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a54" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 1183
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_ewa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a55" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 1204
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_ewa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a56" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 1225
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_ewa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a57" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 1246
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_ewa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a58" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 1267
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_ewa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a59" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 1288
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_ewa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a60" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 1309
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_ewa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a61" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 1330
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_ewa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a62" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 1351
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_tcm:k5_imem|k5_spram:spram_ewa|altera_spram_10240x32:spram_10240x32.altera_spram_10240x32_inst|altsyncram:altsyncram_component|altsyncram_98h1:auto_generated|ram_block1a63" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_98h1.tdf Line: 1372
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|k5_sys:k5_sys|k5_confmem:k5_confimem|k5_dpram:dpram|altera_dpram_8x32:dpram_8x32.altera_dpram_8x32_inst|altsyncram:altsyncram_component|altsyncram_pbs1:auto_generated|q_b[16]" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/altsyncram_pbs1.tdf Line: 536
+Info (278001): Inferred 63 megafunctions from design logic
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|conv:conv|Mult2" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 278
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|linear:linear|Mult0" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 102
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|pool:pool|Mult1" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/pool/pool.sv Line: 91
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|pool:pool|Mult0" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/pool/pool.sv Line: 83
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|conv:conv|Mult1" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 248
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|conv:conv|Mult0" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 118
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|conv:conv|Mult3" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 356
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|linear:linear|Mult1" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|conv:conv|Mult27" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 356
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|conv:conv|Mult26" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 356
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|conv:conv|Mult25" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 356
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|conv:conv|Mult24" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 356
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|conv:conv|Mult23" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 356
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|conv:conv|Mult22" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 356
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|conv:conv|Mult21" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 356
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|conv:conv|Mult20" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 356
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|linear:linear|Mult32" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|linear:linear|Mult25" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|linear:linear|Mult24" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|linear:linear|Mult23" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|linear:linear|Mult22" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|linear:linear|Mult21" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|linear:linear|Mult20" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|linear:linear|Mult19" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|linear:linear|Mult18" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|linear:linear|Mult31" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|linear:linear|Mult30" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|linear:linear|Mult29" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|linear:linear|Mult28" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|linear:linear|Mult27" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|linear:linear|Mult26" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|conv:conv|Mult11" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 356
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|conv:conv|Mult10" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 356
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|conv:conv|Mult9" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 356
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|conv:conv|Mult8" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 356
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|conv:conv|Mult7" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 356
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|conv:conv|Mult6" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 356
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|conv:conv|Mult5" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 356
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|conv:conv|Mult4" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 356
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|conv:conv|Mult19" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 356
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|conv:conv|Mult18" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 356
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|conv:conv|Mult17" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 356
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|conv:conv|Mult16" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 356
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|conv:conv|Mult15" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 356
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|conv:conv|Mult14" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 356
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|conv:conv|Mult13" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 356
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|conv:conv|Mult12" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 356
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|linear:linear|Mult9" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|linear:linear|Mult8" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|linear:linear|Mult7" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|linear:linear|Mult6" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|linear:linear|Mult5" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|linear:linear|Mult4" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|linear:linear|Mult3" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|linear:linear|Mult2" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|linear:linear|Mult17" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|linear:linear|Mult16" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|linear:linear|Mult15" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|linear:linear|Mult14" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|linear:linear|Mult13" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|linear:linear|Mult12" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|linear:linear|Mult11" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|linear:linear|Mult10" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+Info (12130): Elaborated megafunction instantiation "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|conv:conv|lpm_mult:Mult2" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 278
+Info (12133): Instantiated megafunction "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|conv:conv|lpm_mult:Mult2" with the following parameter: File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 278
+    Info (12134): Parameter "LPM_WIDTHA" = "6"
+    Info (12134): Parameter "LPM_WIDTHB" = "6"
+    Info (12134): Parameter "LPM_WIDTHP" = "12"
+    Info (12134): Parameter "LPM_WIDTHR" = "12"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_oks.tdf
+    Info (12023): Found entity 1: mult_oks File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/mult_oks.tdf Line: 29
+Info (12130): Elaborated megafunction instantiation "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|linear:linear|lpm_mult:Mult0" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 102
+Info (12133): Instantiated megafunction "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|linear:linear|lpm_mult:Mult0" with the following parameter: File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 102
+    Info (12134): Parameter "LPM_WIDTHA" = "5"
+    Info (12134): Parameter "LPM_WIDTHB" = "6"
+    Info (12134): Parameter "LPM_WIDTHP" = "11"
+    Info (12134): Parameter "LPM_WIDTHR" = "11"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_mks.tdf
+    Info (12023): Found entity 1: mult_mks File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/mult_mks.tdf Line: 29
+Info (12130): Elaborated megafunction instantiation "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|pool:pool|lpm_mult:Mult1" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/pool/pool.sv Line: 91
+Info (12133): Instantiated megafunction "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|pool:pool|lpm_mult:Mult1" with the following parameter: File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/pool/pool.sv Line: 91
+    Info (12134): Parameter "LPM_WIDTHA" = "6"
+    Info (12134): Parameter "LPM_WIDTHB" = "6"
+    Info (12134): Parameter "LPM_WIDTHP" = "12"
+    Info (12134): Parameter "LPM_WIDTHR" = "12"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12130): Elaborated megafunction instantiation "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|pool:pool|lpm_mult:Mult0" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/pool/pool.sv Line: 83
+Info (12133): Instantiated megafunction "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|pool:pool|lpm_mult:Mult0" with the following parameter: File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/pool/pool.sv Line: 83
+    Info (12134): Parameter "LPM_WIDTHA" = "5"
+    Info (12134): Parameter "LPM_WIDTHB" = "5"
+    Info (12134): Parameter "LPM_WIDTHP" = "10"
+    Info (12134): Parameter "LPM_WIDTHR" = "10"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_kks.tdf
+    Info (12023): Found entity 1: mult_kks File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/mult_kks.tdf Line: 29
+Info (12130): Elaborated megafunction instantiation "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|conv:conv|lpm_mult:Mult1" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 248
+Info (12133): Instantiated megafunction "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|conv:conv|lpm_mult:Mult1" with the following parameter: File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 248
+    Info (12134): Parameter "LPM_WIDTHA" = "4"
+    Info (12134): Parameter "LPM_WIDTHB" = "5"
+    Info (12134): Parameter "LPM_WIDTHP" = "9"
+    Info (12134): Parameter "LPM_WIDTHR" = "9"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_bjs.tdf
+    Info (12023): Found entity 1: mult_bjs File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/mult_bjs.tdf Line: 29
+Info (12130): Elaborated megafunction instantiation "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|conv:conv|lpm_mult:Mult3" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 356
+Info (12133): Instantiated megafunction "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|conv:conv|lpm_mult:Mult3" with the following parameter: File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/conv/conv.sv Line: 356
+    Info (12134): Parameter "LPM_WIDTHA" = "8"
+    Info (12134): Parameter "LPM_WIDTHB" = "9"
+    Info (12134): Parameter "LPM_WIDTHP" = "17"
+    Info (12134): Parameter "LPM_WIDTHR" = "17"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_vds.tdf
+    Info (12023): Found entity 1: mult_vds File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/mult_vds.tdf Line: 29
+Info (12130): Elaborated megafunction instantiation "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|linear:linear|lpm_mult:Mult1" File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+Info (12133): Instantiated megafunction "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|linear:linear|lpm_mult:Mult1" with the following parameter: File: /data/project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/xlrs/slrx/linear/linear.sv Line: 231
+    Info (12134): Parameter "LPM_WIDTHA" = "9"
+    Info (12134): Parameter "LPM_WIDTHB" = "8"
+    Info (12134): Parameter "LPM_WIDTHP" = "17"
+    Info (12134): Parameter "LPM_WIDTHR" = "17"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_0es.tdf
+    Info (12023): Found entity 1: mult_0es File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/mult_0es.tdf Line: 29
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following LCELL buffer node(s):
+        Warning (14320): Synthesized away node "k5_xbox_sys:k5_xbox_sys|xbox:xbox|xbox_xlr_wrap:xbox_xlr_wrap|slrx:slrx|conv:conv|lpm_mult:Mult1|mult_bjs:auto_generated|le5a[5]" File: /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/db/mult_bjs.tdf Line: 43
+Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (13014): Ignored 54 buffer(s)
+    Info (13016): Ignored 4 CARRY_SUM buffer(s)
+    Info (13019): Ignored 50 SOFT buffer(s)
+Warning (13034): The following nodes have both tri-state and non-tri-state drivers
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO[33]" and its non-tri-state driver. File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 63
+Warning (13039): The following bidirectional pins have no drivers
+    Warning (13040): bidirectional pin "GSENSOR_SDO" has no driver File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 54
+    Warning (13040): bidirectional pin "ARDUINO_RESET_N" has no driver File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 58
+    Warning (13040): bidirectional pin "GPIO[7]" has no driver File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 63
+Warning (13027): Removed fan-outs from the following always-disabled I/O buffers
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "GPIO[27]" to the node "GPIO[27]" File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 63
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "GPIO[33]" to the node "GPIO[33]" File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 63
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "GPIO[35]" to the node "GPIO[35]" File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 63
+Info (13000): Registers with preset signals will power-up high File: /project/tsmc65/shared/k5_share/kuntz5/src/uart_access/k5_uart_tx.sv Line: 165
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13009): TRI or OPNDRN buffers permanently enabled
+    Warning (13010): Node "GPIO[33]~synth" File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 63
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "DRAM_ADDR[0]" is stuck at GND File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 13
+    Warning (13410): Pin "DRAM_ADDR[1]" is stuck at GND File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 13
+    Warning (13410): Pin "DRAM_ADDR[2]" is stuck at GND File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 13
+    Warning (13410): Pin "DRAM_ADDR[3]" is stuck at GND File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 13
+    Warning (13410): Pin "DRAM_ADDR[4]" is stuck at GND File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 13
+    Warning (13410): Pin "DRAM_ADDR[5]" is stuck at GND File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 13
+    Warning (13410): Pin "DRAM_ADDR[6]" is stuck at GND File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 13
+    Warning (13410): Pin "DRAM_ADDR[7]" is stuck at GND File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 13
+    Warning (13410): Pin "DRAM_ADDR[8]" is stuck at GND File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 13
+    Warning (13410): Pin "DRAM_ADDR[9]" is stuck at GND File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 13
+    Warning (13410): Pin "DRAM_ADDR[10]" is stuck at GND File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 13
+    Warning (13410): Pin "DRAM_ADDR[11]" is stuck at GND File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 13
+    Warning (13410): Pin "DRAM_ADDR[12]" is stuck at GND File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 13
+    Warning (13410): Pin "DRAM_BA[0]" is stuck at GND File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 14
+    Warning (13410): Pin "DRAM_BA[1]" is stuck at GND File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 14
+    Warning (13410): Pin "DRAM_CAS_N" is stuck at GND File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 15
+    Warning (13410): Pin "DRAM_CKE" is stuck at GND File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 16
+    Warning (13410): Pin "DRAM_CLK" is stuck at GND File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 17
+    Warning (13410): Pin "DRAM_CS_N" is stuck at GND File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 18
+    Warning (13410): Pin "DRAM_LDQM" is stuck at GND File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 20
+    Warning (13410): Pin "DRAM_RAS_N" is stuck at GND File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 21
+    Warning (13410): Pin "DRAM_UDQM" is stuck at GND File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 22
+    Warning (13410): Pin "DRAM_WE_N" is stuck at GND File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 23
+    Warning (13410): Pin "VGA_B[0]" is stuck at GND File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 43
+    Warning (13410): Pin "VGA_B[1]" is stuck at GND File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 43
+    Warning (13410): Pin "VGA_B[2]" is stuck at GND File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 43
+    Warning (13410): Pin "VGA_B[3]" is stuck at GND File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 43
+    Warning (13410): Pin "VGA_G[0]" is stuck at GND File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 44
+    Warning (13410): Pin "VGA_G[1]" is stuck at GND File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 44
+    Warning (13410): Pin "VGA_G[2]" is stuck at GND File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 44
+    Warning (13410): Pin "VGA_G[3]" is stuck at GND File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 44
+    Warning (13410): Pin "VGA_HS" is stuck at GND File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 45
+    Warning (13410): Pin "VGA_R[0]" is stuck at GND File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 46
+    Warning (13410): Pin "VGA_R[1]" is stuck at GND File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 46
+    Warning (13410): Pin "VGA_R[2]" is stuck at GND File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 46
+    Warning (13410): Pin "VGA_R[3]" is stuck at GND File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 46
+    Warning (13410): Pin "VGA_VS" is stuck at GND File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 47
+    Warning (13410): Pin "GSENSOR_CS_N" is stuck at GND File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 50
+    Warning (13410): Pin "GSENSOR_SCLK" is stuck at GND File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 52
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 13 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file /project/tsmc65/users/eyalsho/ws/my_k5_proj/hw/gen_fpga/output_files/k5_xbox_rc3.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 4 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "ADC_CLK_10" File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 8
+    Warning (15610): No output dependent on input pin "KEY[1]" File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 34
+    Warning (15610): No output dependent on input pin "GSENSOR_INT[1]" File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 51
+    Warning (15610): No output dependent on input pin "GSENSOR_INT[2]" File: /project/tsmc65/shared/k5_share/k5_xbox/fpga/src/de10lite_k5_xbox_wrap.sv Line: 51
+Info (21057): Implemented 22812 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 17 input pins
+    Info (21059): Implemented 97 output pins
+    Info (21060): Implemented 71 bidirectional pins
+    Info (21061): Implemented 21797 logic cells
+    Info (21064): Implemented 767 RAM segments
+    Info (21065): Implemented 1 PLLs
+    Info (21062): Implemented 62 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 286 warnings
+    Info: Peak virtual memory: 814 megabytes
+    Info: Processing ended: Sun Jun 28 20:03:20 2026
+    Info: Elapsed time: 00:01:16
+    Info: Total CPU time (on all processors): 00:00:00

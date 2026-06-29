@@ -1,0 +1,146 @@
+Info (125061): Changed top-level design entity name to "de10lite_wrap"
+Info (125069): Default assignment values were changed in the current version of the Quartus Prime software -- changes to default assignments values are contained in file /data/project/tsmc65/shared/quartus_install/intelFPGA_lite/24.1std/quartus/linux64/assignment_defaults.qdf
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
+    Info: Copyright (C) 2025  Altera Corporation. All rights reserved.
+    Info: Your use of Altera Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Altera Program License 
+    Info: Subscription Agreement, the Altera Quartus Prime License Agreement,
+    Info: the Altera IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Altera and sold by Altera or its authorized distributors.  Please
+    Info: refer to the Altera Software License Subscription Agreements 
+    Info: on the Quartus Prime software download page.
+    Info: Processing started: Sun Jun 28 20:08:43 2026
+Info: Command: quartus_sta k5_xbox_rc3 -c k5_xbox_rc3
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20029): Only one processor detected - disabling parallel compilation
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (332104): Reading SDC File: '../../../../../../shared/k5_share/kuntz5/fpga/gen_de10lite/DE10Lite_ref/DE10_LITE_Default.sdc'
+Info (332110): Deriving PLL clocks
+    Info (332110): create_generated_clock -source {k5x_pll|altpll_component|auto_generated|pll1|inclk[0]} -duty_cycle 50.00 -name {k5x_pll|altpll_component|auto_generated|pll1|clk[0]} {k5x_pll|altpll_component|auto_generated|pll1|clk[0]}
+Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
+Info (332146): Worst-case setup slack is 1.589
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     1.589               0.000 k5x_pll|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):    16.194               0.000 MAX10_CLK1_50 
+    Info (332119):    16.651               0.000 MAX10_CLK2_50 
+Info (332146): Worst-case hold slack is 0.340
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.340               0.000 k5x_pll|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     0.356               0.000 MAX10_CLK1_50 
+    Info (332119):     0.362               0.000 MAX10_CLK2_50 
+Info (332146): Worst-case recovery slack is 10.710
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    10.710               0.000 k5x_pll|altpll_component|auto_generated|pll1|clk[0] 
+Info (332146): Worst-case removal slack is 1.530
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     1.530               0.000 k5x_pll|altpll_component|auto_generated|pll1|clk[0] 
+Info (332146): Worst-case minimum pulse width slack is 9.582
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     9.582               0.000 k5x_pll|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     9.646               0.000 MAX10_CLK1_50 
+    Info (332119):     9.661               0.000 MAX10_CLK2_50 
+    Info (332119):    96.000               0.000 ADC_CLK_10 
+Info (332114): Report Metastability: Found 1 synchronizer chains.
+    Info (332114): The design MTBF is not calculated because there are no specified synchronizers in the design.
+    Info (332114): Number of Synchronizer Chains Found: 1
+    Info (332114): Shortest Synchronizer Chain: 2 Registers
+    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
+    Info (332114): Worst Case Available Settling Time: 35.706 ns
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info (332146): Worst-case setup slack is 3.015
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     3.015               0.000 k5x_pll|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):    16.549               0.000 MAX10_CLK1_50 
+    Info (332119):    17.000               0.000 MAX10_CLK2_50 
+Info (332146): Worst-case hold slack is 0.305
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.305               0.000 k5x_pll|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     0.322               0.000 MAX10_CLK1_50 
+    Info (332119):     0.328               0.000 MAX10_CLK2_50 
+Info (332146): Worst-case recovery slack is 11.500
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    11.500               0.000 k5x_pll|altpll_component|auto_generated|pll1|clk[0] 
+Info (332146): Worst-case removal slack is 1.374
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     1.374               0.000 k5x_pll|altpll_component|auto_generated|pll1|clk[0] 
+Info (332146): Worst-case minimum pulse width slack is 9.601
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     9.601               0.000 k5x_pll|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     9.655               0.000 MAX10_CLK1_50 
+    Info (332119):     9.670               0.000 MAX10_CLK2_50 
+    Info (332119):    96.000               0.000 ADC_CLK_10 
+Info (332114): Report Metastability: Found 1 synchronizer chains.
+    Info (332114): The design MTBF is not calculated because there are no specified synchronizers in the design.
+    Info (332114): Number of Synchronizer Chains Found: 1
+    Info (332114): Shortest Synchronizer Chain: 2 Registers
+    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
+    Info (332114): Worst Case Available Settling Time: 36.059 ns
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info (332146): Worst-case setup slack is 12.150
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    12.150               0.000 k5x_pll|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):    18.324               0.000 MAX10_CLK1_50 
+    Info (332119):    18.662               0.000 MAX10_CLK2_50 
+Info (332146): Worst-case hold slack is 0.147
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.147               0.000 k5x_pll|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     0.152               0.000 MAX10_CLK1_50 
+    Info (332119):     0.156               0.000 MAX10_CLK2_50 
+Info (332146): Worst-case recovery slack is 15.519
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    15.519               0.000 k5x_pll|altpll_component|auto_generated|pll1|clk[0] 
+Info (332146): Worst-case removal slack is 0.444
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.444               0.000 k5x_pll|altpll_component|auto_generated|pll1|clk[0] 
+Info (332146): Worst-case minimum pulse width slack is 9.332
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     9.332               0.000 MAX10_CLK2_50 
+    Info (332119):     9.333               0.000 MAX10_CLK1_50 
+    Info (332119):     9.710               0.000 k5x_pll|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):    96.000               0.000 ADC_CLK_10 
+Info (332114): Report Metastability: Found 1 synchronizer chains.
+    Info (332114): The design MTBF is not calculated because there are no specified synchronizers in the design.
+    Info (332114): Number of Synchronizer Chains Found: 1
+    Info (332114): Shortest Synchronizer Chain: 2 Registers
+    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
+    Info (332114): Worst Case Available Settling Time: 38.205 ns
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 930 megabytes
+    Info: Processing ended: Sun Jun 28 20:09:25 2026
+    Info: Elapsed time: 00:00:42
+    Info: Total CPU time (on all processors): 00:00:00
