@@ -6,3 +6,14 @@ hw/xlrs/slrx/conv/db/
 hw/xlrs/slrx/conv/incremental_db/
 sim/*.qpf
 sim/*.qsf
+hw/gen_fpga/*.qpf
+hw/gen_fpga/*.qsf
+hw/gen_fpga/*.qdf
+hw/gen_fpga/prog_files/
+hw/xlrs/slrx/*.qpf
+hw/xlrs/slrx/*.qsf
+hw/xlrs/slrx/conv/*.qpf
+hw/xlrs/slrx/conv/*.qsf
+hw/xlrs/slrx/qsyn_output_files/
+hw/xlrs/slrx/conv/qsyn_output_files/
+sw/apps/hello_k5/build/
