@@ -1,0 +1,8 @@
+hw/gen_fpga/db/
+hw/gen_fpga/incremental_db/
+hw/xlrs/slrx/db/
+hw/xlrs/slrx/incremental_db/
+hw/xlrs/slrx/conv/db/
+hw/xlrs/slrx/conv/incremental_db/
+sim/*.qpf
+sim/*.qsf
