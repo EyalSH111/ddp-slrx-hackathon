@@ -21,7 +21,7 @@ module conv (
 
   enum {IDLE, READ_KERNEL,
         LOAD_ROW0, LOAD_ROW1, LOAD_ROW2, LOAD_ROW3, LOAD_ROW4,
-        CALC, POST_CALC, WRITE, WRITE_POOL,
+        CALC, CALC2, POST_CALC, WRITE, WRITE_POOL,
         NEXT_PIXEL, LOAD_NEW_ROW,
         DONE} state, next_state;
 
@@ -58,6 +58,9 @@ module conv (
   logic [7:0]                        prev_conv_val,  prev_conv_val_ps; // first-of-column-pair
   logic [POOL_OUT_DIM_MAX-1:0][7:0]  even_row_buf,   even_row_buf_ps;  // max of even-row pairs
   logic [7:0]                        pool_out_val,   pool_out_val_ps;  // final pool result
+
+  // Pipelined MAC: partial sum of first 13 products (registered in CALC, used in CALC2)
+  logic signed [MAX_DOT_PROD_WIDTH-1:0] partial_sum, partial_sum_ps;
 
   // Conv output
   logic [7:0]                 conv_out_val, conv_out_val_ps;
@@ -203,8 +206,13 @@ module conv (
         end
       end
 
-      // --- CALC: pipeline cycle — window is registered, conv_out_val_ps settles ---
+      // --- CALC: pipeline stage 1 — window registered, partial_sum_ps (first 13 MACs) settles ---
       CALC: begin
+        next_state = CALC2;
+      end
+
+      // --- CALC2: pipeline stage 2 — partial_sum registered, conv_out_val_ps settles ---
+      CALC2: begin
         next_state = fused_pool_en ? POST_CALC : WRITE;
       end
 
@@ -225,7 +233,6 @@ module conv (
           next_state = NEXT_PIXEL;
         end else begin
           // odd row, odd col: compute final 2x2 pool max and write
-          // pool_val = max(even_row_buf[pc], max(odd_2pc, odd_2pc+1))
           pool_out_val_ps = (pool_pair_max > even_row_buf[pool_col]) ?
                              pool_pair_max : even_row_buf[pool_col];
           next_state = WRITE_POOL;
@@ -299,8 +306,11 @@ module conv (
   end // always_comb
 
   //-----------------------------------------------------------------------------------------------------
-  // Stage 2: MAC on registered window (critical path: window FFs → 25 MACs → register)
-  assign conv_out_val_ps = calc_conv_element(kernel_cache, conv_bias_val, window);
+  // Stage 2a (CALC):  first 13 products → partial_sum FF  (breaks 25-MAC critical path in half)
+  assign partial_sum_ps  = calc_partial_sum(kernel_cache, window);
+
+  // Stage 2b (CALC2): partial_sum + last 12 products + bias → ReLU/clamp → conv_out_val FF
+  assign conv_out_val_ps = calc_conv_final(kernel_cache, conv_bias_val, window, partial_sum);
 
   //-----------------------------------------------------------------------------------------------------
 
@@ -316,6 +326,7 @@ module conv (
       prev_conv_val      <= 0;
       even_row_buf       <= 0;
       pool_out_val       <= 0;
+      partial_sum        <= 0;
       conv_out_val       <= 0;
       conv_rslt_out_addr <= 0;
     end else begin
@@ -329,31 +340,58 @@ module conv (
       prev_conv_val      <= prev_conv_val_ps;
       even_row_buf       <= even_row_buf_ps;
       pool_out_val       <= pool_out_val_ps;
+      partial_sum        <= partial_sum_ps;
       conv_out_val       <= conv_out_val_ps;
       conv_rslt_out_addr <= conv_rslt_out_addr_ps;
     end
   end
 
   //-----------------------------------------------------------------------------------------------------
-  // Combinational function: 5x5 dot product, ReLU, descale by 8 bits
+  // Stage 2a: sum first 13 products (row-major indices 0..12)
+  function automatic logic signed [MAX_DOT_PROD_WIDTH-1:0] calc_partial_sum;
+    input [KERNEL_DIM-1:0][KERNEL_DIM-1:0][7:0] kernel;
+    input [KERNEL_DIM-1:0][KERNEL_DIM-1:0][7:0] win;
+    logic signed [MAX_DOT_PROD_WIDTH-1:0] acc;
+    logic signed [MAX_DOT_PROD_WIDTH-1:0] k_s, w_s;
+    integer r, c, i;
+    begin
+      acc = 0;
+      i = 0;
+      for (r = 0; r < KERNEL_DIM; r++) begin
+        for (c = 0; c < KERNEL_DIM; c++) begin
+          if (i < 13) begin
+            k_s = {{(MAX_DOT_PROD_WIDTH-8){kernel[r][c][7]}}, kernel[r][c]};
+            w_s = {{(MAX_DOT_PROD_WIDTH-8){1'b0}}, win[r][c]};
+            acc = acc + (k_s * w_s);
+          end
+          i = i + 1;
+        end
+      end
+      calc_partial_sum = acc;
+    end
+  endfunction
 
-  function automatic logic [7:0] calc_conv_element;
+  // Stage 2b: add last 12 products (indices 13..24) + partial_sum + bias, ReLU, clamp
+  function automatic logic [7:0] calc_conv_final;
     input [KERNEL_DIM-1:0][KERNEL_DIM-1:0][7:0] kernel;
     input signed [MAX_DOT_PROD_WIDTH-1:0]        bias;
     input [KERNEL_DIM-1:0][KERNEL_DIM-1:0][7:0] win;
-
+    input signed [MAX_DOT_PROD_WIDTH-1:0]        part_sum;
     logic signed [MAX_DOT_PROD_WIDTH-1:0] acc;
-    logic signed [MAX_DOT_PROD_WIDTH-1:0] k_s;
-    logic signed [MAX_DOT_PROD_WIDTH-1:0] w_s;
+    logic signed [MAX_DOT_PROD_WIDTH-1:0] k_s, w_s;
     logic signed [MAX_DOT_PROD_WIDTH-1:0] ret_val;
-    integer r, c;
+    integer r, c, i;
     begin
-      acc = bias;
+      acc = part_sum + bias;
+      i = 0;
       for (r = 0; r < KERNEL_DIM; r++) begin
         for (c = 0; c < KERNEL_DIM; c++) begin
-          k_s = {{(MAX_DOT_PROD_WIDTH-8){kernel[r][c][7]}}, kernel[r][c]};
-          w_s = {{(MAX_DOT_PROD_WIDTH-8){1'b0}}, win[r][c]};
-          acc = acc + (k_s * w_s);
+          if (i >= 13) begin
+            k_s = {{(MAX_DOT_PROD_WIDTH-8){kernel[r][c][7]}}, kernel[r][c]};
+            w_s = {{(MAX_DOT_PROD_WIDTH-8){1'b0}}, win[r][c]};
+            acc = acc + (k_s * w_s);
+          end
+          i = i + 1;
         end
       end
       if (acc <= 0)
@@ -362,7 +400,7 @@ module conv (
         ret_val = acc >>> 8;
         if (ret_val > 255) ret_val = 255;
       end
-      calc_conv_element = ret_val[7:0];
+      calc_conv_final = ret_val[7:0];
     end
   endfunction
 

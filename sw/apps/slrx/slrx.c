@@ -1,7 +1,7 @@
 #include <k5_libs.h>
 #include <slr_lib.h>
 #include "slrx.h"
-
+#define FUSED_XON
 // Forward declaration for fused conv+pool (defined in conv.c)
 void conv_xlr_setup_fused(uint8_t* pool_arr_out, uint8_t* conv_arr_in, int arr_in_dim,
                            int8_t* kernel_w, int32_t kernel_b);
